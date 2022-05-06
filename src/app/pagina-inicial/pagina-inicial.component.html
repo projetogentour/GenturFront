@@ -1,72 +1,194 @@
-  <style>
-    .carousel-item {
-      height: 500px;
-    }
-  </style>
-  <header>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">
+      This is a modified jumbotron that occupies the entire horizontal space of
+      its parent.
+    </p>
+  </div>
+</div>
 
+<!-- NAO TIRAR O jumbotron -->
+<!-- NAO TIRAR O jumbotron -->
+<!-- NAO TIRAR O jumbotron -->
+
+<style>
+  .carousel-item {
+    height: 200px;
+  }
+</style>
+
+<!-- Carousel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li
+      data-target="#carouselExampleIndicators"
+      data-slide-to="0"
+      class="active"
+    ></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="../../assets/img/1277773.png" alt="Primeiro Slide">
+      <img
+        class="d-block w-100"
+        src="https://t.ctcdn.com.br/wxrR7L5StCuIr2QHtlvhPKScUmk=/512x288/smart/filters:format(webp)/i555288.jpeg"
+        alt="Primeiro Slide"
+      />
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../../assets/img/1542833.png" alt="Segundo Slide">
+      <img
+        class="d-block w-100"
+        src="https://tm.ibxk.com.br/2022/03/29/29165128763537.jpg?ims=1120x420"
+        alt="Segundo Slide"
+      />
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../../assets/img/1888308.png" alt="Terceiro Slide">
+      <img
+        class="d-block w-100"
+        src="https://i.pinimg.com/736x/e2/b0/2a/e2b02a957f95b07ba6df7c47b69661e3.jpg"
+        alt="Terceiro Slide"
+      />
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="prev"
+  >
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Anterior</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="next"
+  >
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Próximo</span>
   </a>
 </div>
-</header>
+<!-- /Carousel -->
 
-<div class="container" id="produtos">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-      <div class="col">
-        <div class="card">
-          <img src="---" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"> TITULO </h5>
-            <p class="card-text">PRECO</p>
-            <p class="card-text">descricao do treco</p>
-              <a href="" class="btn btn-secondary">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="---" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"> TITULO </h5>
-            <p class="card-text">PRECO</p>
-            <p class="card-text">descricao do treco</p>
-              <a href="" class="btn btn-secondary">Comprar</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="container">
-        <div class="row">
-<div class="col-md-6">
-  <h1>SOBRE</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur itaque laborum distinctio harum quidem officia architecto ut inventore? Dolor ipsam voluptate corporis rerum inventore vel officiis voluptatem nam qui quam!</p>
+<div class="container text-center p-3" id="produtos">
+  <h2>Produtos</h2>
 </div>
-<div class="col-md-6"> IMAGEM LEGAL</div>
+
+<div class="container">
+  <div class="row p-5">
+    <div class="col-md-12">
+      <div class="col-md-12">
+        <div class="card-deck">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">INSTRUMENTOS</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">DECORAÇÃO</h5>
+              <p class="card-text">
+                This card has supporting text below as a natural lead-in to
+                additional content.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">ROUPA</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This card has even longer content
+                than the first to show that equal height action.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center" id="servicos">
+  <h2>Serviços</h2>
+</div>
+
+<div class="container">
+  <div class="row p-5">
+    <div class="col-md-12">
+      <div class="col-md-12">
+        <div class="card-deck">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">GUIA</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">VIAGEM</h5>
+              <p class="card-text">
+                This card has supporting text below as a natural lead-in to
+                additional content.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">ARTESÃO</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This card has even longer content
+                than the first to show that equal height action.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+<div class="jumbotron jumbotron-fluid" id="sobre">
+  <div class="container">
+    <h1 class="display-4">GenTur</h1>
+    <p class="lead">Aqui vai um texto sobre o projeto integrador GenTur</p>
+  </div>
+</div>

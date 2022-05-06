@@ -1,43 +1,38 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Sobre <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Produto</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " routerLink="/contato">Contato</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
-  </div>
-</nav>
+<div id="container">
+  <nav class="navbar">
+      <ul>
+          <li><a routerLink="/inicio">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a>
+            <ul>
+              <!-- LINKS SERAO ANCORADOS COM A PAGINA INICIAL -->
+                <li><a href="#">Guia</a></li>
+                <li><a href="#">Viagem</a></li>
+                <li><a href="#">Artesão</a></li>
+            </ul>
 
-
-<div class="header row">
-  <div class="col-md-12">
-    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-    <label for="openSidebarMenu" class="sidebarIconToggle">
-      <div class="spinner diagonal part-1"></div>
-      <div class="spinner horizontal"></div>
-      <div class="spinner diagonal part-2"></div>
-    </label>
-    <div id="sidebarMenu">
-      <ul class="sidebarMenuInner">
-        <li>Usuario</li>
-       <li>Vendedor</li>
+            </li>
+            <li><a href="#produtos">Produtos</a>
+              <ul>
+                  <li><a href="#">Instrumentos</a></li>
+                  <li><a href="#">Decoração</a></li>
+                  <li><a href="#">Roupas</a></li>
+              </ul>
+              </li>
+          <li><a  routerLink="/contato">Contato</a></li>
+          <li><a href="#">Minha Conta</a>
+            <ul>
+                <li><a  routerLink="/entrar">Login</a></li>
+                <li><a routerLink="/cadastrar">Cadastrar</a></li>
+            </ul>
+            </li>
       </ul>
-    </div>
-  </div>
+      <!-- <div class="pesquisar">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+          <button class="btn my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
+      </div> -->
+  </nav>
 </div>
