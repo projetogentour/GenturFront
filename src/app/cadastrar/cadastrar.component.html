@@ -1,77 +1,50 @@
 <main>
-<div class="row d-flex justify-content-center">
-  <div class="col-md-6" >
-    <div class="container">
-      <!-- <p class="logo"> <img src="https://avatars.githubusercontent.com/t/5853601?s=280&v=4" alt=""></p> -->
-      <h1 class="text-center texto">Cadastre-se</h1>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+      <div class="container">
+        <!-- <p class="logo"> <img src="https://avatars.githubusercontent.com/t/5853601?s=280&v=4" alt=""></p> -->
+        <h1 class="text-center texto">Cadastre-se</h1>
 
-              <div class="form-group">
-                <label for="nome">Nome</label>
-                <input
-                  class="form-control"
-                  type="text"
-                  name="nome"
-                  id="nome"
-                  placeholder="Seu Nome"
-                />
-              </div>
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome"
+            placeholder="Seu Nome" />
+        </div>
 
-              <div class="form-group">
-                <label for="usuario"> Usuario</label>
-                <input
-                  class="form-control"
-                  type="text"
-                  name="usuario"
-                  id="usuario"
-                  placeholder="Seu Usuario"
-                />
-              </div>
+        <div class="form-group">
+          <label for="usuario"> Usuario</label>
+          <input [(ngModel)]="usuario.emailUsuario" class="form-control" type="text" name="usuario" id="usuario"
+            placeholder="Email@.com" />
+        </div>
 
-              <div class="form-group">
-                <label for="senha"> Senha</label>
-                <input
-                  class="form-control"
-                  type="password"
-                  name="senha"
-                  id="senha"
-                  placeholder="Sua Senha"
-                />
-              </div>
+        <div class="form-group">
+          <label for="senha"> Senha</label>
+          <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha"
+            placeholder="Sua Senha" />
+        </div>
 
-              <div class="form-group">
-                <label for="confirmSenha"> Confirmar Senha</label>
-                <input
-                  class="form-control"
-                  type="password"
-                  name="confirmSenha"
-                  id="confirmSenha"
-                  placeholder="Confirme Sua Senha"
-                />
-              </div>
+        <div class="form-group">
+          <label for="confirmSenha"> Confirmar Senha</label>
+          <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+            placeholder="Confirme Sua Senha" />
+        </div>
 
-              <div class="form-group">
-                <label for="tipo"> Tipo de Usuario</label>
-                <select class="form-control" name="tipo" id="tipo">
-                  <option>Selecione um tipo de usuario:</option>
-                  <option value="normal">Comprador</option>
-                  <option value="Adm">Vendedor</option>
-                </select>
-              </div>
+        <div class="form-group">
+          <label for="tipo"> Tipo de Usuario</label>
+          <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
+            <option>Selecione um tipo de usuario:</option>
+            <option value="normal">Comprador</option>
+            <option value="Adm">Vendedor</option>
+          </select>
+        </div>
 
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="btn cadastro">Criar conta</button>
-                <button type="submit" class="btn btn-primary" routerLink="/entrar">login</button>
-                <button type="submit" class="btn btn-primary" routerLink="/inicio">HOME</button>
-              </div>
+        <div class="d-flex justify-content-center">
+
+          <button type="submit" class="btn btn-primary" (click)="cadastrar()">login</button>
+          <button type="submit" class="btn btn-primary" routerLink="/entrar">Cancelar</button>
+        </div>
+      </div>
+
+    </div>
   </div>
-
-  </div>
-</div>
 </main>
-
-
-
-
-
-
-
