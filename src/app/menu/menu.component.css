@@ -1,71 +1,53 @@
  @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 
+.fs-16 {
+  font-size: 25pt;
+  text-align: center;
+}
 
-#container {
-	margin: 0 auto;
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.topo{
+  background-color: #1c877c5f;
+
+}
+.sair{
+  font-size: 16pt;
+}
+
+.navconteudo {
+
   	background-color: #1C877D;
 }
-
-p {
-	text-align: center;
-}
-
-nav {
-	background-color: #1C877D;
-}
-
-nav ul {
+/* .navconteudo ul {
 	padding: 0;
   margin: 0;
 	list-style: none;
 	position: relative;
-	}
+	} */
 
-nav ul li {
-	display:inline-block;
-	background-color: #1C877D;
-	}
+  /* .navconteudo ul li {
+    display:inline-block;
+    background-color: #e1eae9;
+    } */
 
-nav a {
-	display:flex;
-	padding: 0  25px;
-	color:#FFF;
-	font-size:20px;
-	line-height: 60px;
-	text-decoration:none;
-}
+.navconteudo a {
+    padding: 0  18px;
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    line-height:  45px;
+    text-decoration:none;
+    font-weight: bold;
+  }
 
-nav a:hover {
-	background-color: #9bd487;
-}
+  .navconteudo a:hover {
+    background-color: #9bd487;
+  }
 
-/* Hide Dropdowns by Default */
-nav ul ul {
-	display: none;
-	position: absolute;
-	top: 60px; /* the height of the main nav */
-}
-
-/* Display Dropdowns on Hover */
-nav ul li:hover > ul {
-	display:inherit;
-}
-
-/* Fisrt Tier Dropdown */
-nav ul ul li {
-	width:152px;
-	float:none;
-	display:list-item;
-	position: relative;
-}
-
-/* Second, Third and more Tiers	*/
-nav ul ul ul li {
-	position: relative;
-	top:-60px;
-	left:170px;
-}
-
-/* Change this in order to change the Dropdown symbol */
-/* li > a:after { content:  ' +'; }
-li > a:only-child:after { content: ''; } */
+  .botaoP{
+    color: black;
+    background-color: rgb(2, 236, 236);
+  }

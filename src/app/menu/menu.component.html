@@ -1,38 +1,87 @@
+<nav class="navbar navbar-expand-lg navbar-light topo">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div id="container">
-  <nav class="navbar">
-      <ul>
-          <li><a routerLink="/inicio">Home</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a>
-            <ul>
-              <!-- LINKS SERAO ANCORADOS COM A PAGINA INICIAL -->
-                <li><a href="#">Guia</a></li>
-                <li><a href="#">Viagem</a></li>
-                <li><a href="#">Artesão</a></li>
-            </ul>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <li class="nav-item active">
+        <img src="https://cdn.discordapp.com/attachments/971065406712320010/972653607319109642/16519690581188825130.png" alt="" width="70px" height="70px" class="img-fluid rounded-circle">
+      </li>
+      <li class="nav-item pl-3">
+        <p class="m-0 font-weight-bold text-white fs-16">GENTUR</p>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <li class="nav-item pl-3">
+        <a class="m-0 font-weight-bold text-white sair" routerLink="/entrar">Sair <i class="fa fa-sign-out"
+            aria-hidden="true"></i></a>
+      <!-- </li> (click)='sair()' -->
+    </ul>
+  </div>
+</nav>
 
-            </li>
-            <li><a href="#produtos">Produtos</a>
-              <ul>
-                  <li><a href="#">Instrumentos</a></li>
-                  <li><a href="#">Decoração</a></li>
-                  <li><a href="#">Roupas</a></li>
-              </ul>
-              </li>
-          <li><a  routerLink="/contato">Contato</a></li>
-          <li><a href="#">Minha Conta</a>
-            <ul>
-                <li><a  routerLink="/entrar">Login</a></li>
-                <li><a routerLink="/cadastrar">Cadastrar</a></li>
-            </ul>
-            </li>
-      </ul>
-      <!-- <div class="pesquisar">
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
-          <button class="btn my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>
-      </div> -->
-  </nav>
-</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-light navconteudo">
+  <div class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+      usuario
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" routerLink="/entrar">Login</a>
+      <a class="dropdown-item" routerLink="/cadastrar">Cadastrar</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Detalhes da conta</a>
+    </div>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#">  <span class="sr-only">(current)</span></a>
+        </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/inicio">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          Produtos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Decoração</a>
+          <a class="dropdown-item" href="#">Instrumentos</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#produtos">Outros</a>
+        </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+            Serviços
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Guia</a>
+            <a class="dropdown-item" href="#">Viagens</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#servicos">Outros</a>
+          </div>
+      <li class="nav-item">
+        <a class="nav-link" href="#promocao">Promoções</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sobre">Sobre</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contato">Contato</a>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+      <button class="btn botaoP my-2 my-sm-0" type="submit">Pesquisar</button>
+    </form>
+  </div>
+</nav>
