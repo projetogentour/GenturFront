@@ -2,12 +2,17 @@ import { Produto } from "./Produto";
 
 export class Usuario {
   public id: number;
-  public nome: string;
-  public emailUsuario: string;
+  public nomeCompleto: string;
+  public usuario: string;
   public foto: string;
   public senha: string;
   public tipo: string;
-  public dadosPessoais: string;
-  public dadosPagamento: string;
+  public telefone: string;
+  public identidade: string;
+  public cep: string;
+  public nCasa: string;
+  public refCasa: string;
+  public validadeCarao: string;
+  public cvv: string;
   public produto: Produto[];
 }

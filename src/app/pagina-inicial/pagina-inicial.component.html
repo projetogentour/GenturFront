@@ -57,122 +57,38 @@
   <h2>Produtos</h2>
 </div>
 
-<div class="main">
-  <ul class="cards">
-    <li class="cards_item">
+
+
+  <div class="cards">
+    <div class="cards_item" *ngFor="let produto of listaProduto">
       <div class="card">
         <div class="card_image">
-          <img
-            src="https://msnamidia.com.br/wp-content/uploads/2019/03/JA.jpg"
-          />
+          <img class="img-fluid" src="{{produto.foto}}"/>
         </div>
         <div class="card_content">
-          <h2 class="card_title">Card Grid Layout</h2>
+          <h2 class="card_title">{{produto.nome}}</h2>
           <p class="card_text">
-            Demo of pixel perfect pure CSS simple responsive card grid layout
+            {{produto.descricao}}
           </p>
-          <button class="btn card_btn">R$ 100,00</button>
+          <button class="btn card_btn">R$: {{produto.preco}}</button>
+          <button class="btn card_btn" [routerLink]="['/postagem-edit', produto.id]">Editar</button>
         </div>
       </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image">
-          <img
-            src="https://msnamidia.com.br/wp-content/uploads/2019/03/JA.jpg"
-          />
-        </div>
-        <div class="card_content">
-          <h2 class="card_title">BOLSA</h2>
-          <p class="card_text">
-            Bolsa feito de couro e costurada a mão por Maria do interior de rio
-            grande
-          </p>
-          <button class="btn card_btn">R$ 100,00</button>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image">
-          <img
-            src="https://artesanatodabahia.com.br/wp-content/uploads/2021/03/Artes%C3%A3o-005-1024x769.jpg"
-          />
-        </div>
-        <div class="card_content">
-          <h2 class="card_title">BOLS</h2>
-          <p class="card_text">
-            Bolsa feito de couro e costurada a mão por Maria do interior de rio
-            grande
-          </p>
-          <button class="btn card_btn">R$ 100,00</button>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image">
-          <img
-            src="https://www.paraibainforma.com.br/wp-content/uploads/2013/05/artesanatocouro13052013.jpg"
-          />
-        </div>
-        <div class="card_content">
-          <h2 class="card_title">BOLS</h2>
-          <p class="card_text">
-            Bolsa feito de couro e costurada a mão por Maria do interior de rio
-            grande
-          </p>
-          <button class="btn card_btn">R$ 100,00</button>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image">
-          <img
-            src="https://www.paraibainforma.com.br/wp-content/uploads/2013/05/artesanatocouro13052013.jpg"
-          />
-        </div>
-        <div class="card_content">
-          <h2 class="card_title">BOLS</h2>
-          <p class="card_text">
-            Bolsa feito de couro e costurada a mão por Maria do interior de rio
-            grande
-          </p>
-          <button class="btn card_btn">R$ 100,00</button>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image">
-          <img
-            src="https://www.paraibainforma.com.br/wp-content/uploads/2013/05/artesanatocouro13052013.jpg"
-          />
-        </div>
-        <div class="card_content">
-          <h2 class="card_title">BOLSA</h2>
-          <p class="card_text">
-            Bolsa feito de couro e costurada a mão por Maria do interior de rio
-            grande
-          </p>
-          <button class="btn card_btn">R$ 100,00</button>
-        </div>
-      </div>
-    </li>
-  </ul>
+    </div>
+  </div>
 
   <!-- CARD MAIS PRODUTOS -->
-  <div class="card p-2">
+  <!-- <div class="card p-2">
     <div class="card-header">Produtos feito a mão</div>
     <div class="card-body">
       <h5 class="card-title">Sei la</h5>
       <p class="card-text">algum texto aqui .</p>
       <a href="#" class="btn btn-primary">Encontre mais produtos</a>
     </div>
-  </div>
+  </div> -->
     <!-- \CARD MAIS PRODUTOS -->
-</div>
+
+
 <!-- FIM DA PARTE DE PRODUTOS  -->
 
 <!-- ABA SERVICOS -->

@@ -23,17 +23,16 @@
 </nav>
 
 
-
-<nav class="navbar navbar-expand-lg navbar-light navconteudo">
+<div ><nav class="navbar navbar-expand-lg navbar-light navconteudo" >
   <div class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-      usuario
+    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+      <img [src]="foto" onerror="this.src = 'https://cdn-icons-png.flaticon.com/512/848/848006.png' " alt="imagem de perfil" class="rounded-circle img-fluid" width="50">
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       <a class="dropdown-item" routerLink="/entrar">Login</a>
       <a class="dropdown-item" routerLink="/cadastrar">Cadastrar</a>
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Detalhes da conta</a>
+      <a class="dropdown-item" [routerLink]="['/usuario-edit', id]">Detalhes da conta</a>
     </div>
   </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,13 +42,13 @@
     <ul class="navbar-nav mr-auto">
 
         <li class="nav-item active">
-          <a class="nav-link" href="#">  <span class="sr-only">(current)</span></a>
+          <a class="nav-link" >  <span class="sr-only">(current)</span></a>
         </li>
       <li class="nav-item active">
         <a class="nav-link" routerLink="/inicio">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
           Produtos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -75,6 +74,9 @@
         <a class="nav-link" href="#sobre">Sobre</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModal">Vender</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" routerLink="/contato">Contato</a>
       </li>
 
@@ -84,4 +86,56 @@
       <button class="btn botaoP my-2 my-sm-0" type="submit">Pesquisar</button>
     </form>
   </div>
-</nav>
+</nav></div>
+
+
+
+<div class="container">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Novo Produto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Nome</label>
+          <input [(ngModel)]="produto.nome" name="nome" type="text" class="form-control" id="nome" placeholder="Digite o nome od produto">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Descrição</label>
+          <input [(ngModel)]="produto.descricao" class="form-control" name="descricao" id="descricao" rows="3">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Foto</label>
+          <input [(ngModel)]="produto.foto" class="form-control" name="foto" id="foto" rows="3">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Preço</label>
+          <input [(ngModel)]="produto.preco" class="form-control" name="preco" id="preco" rows="3">
+
+        <div class="form-group">
+          <label for="texto">Escolha uma Categoria!</label>
+          <select name="categoria" id="categoria" class="form-control" [(ngModel)]="idCategoria" (change)="findByIdCategoria()">
+            <option *ngFor="let categoria of listaCategoria" value="{{categoria.id}}">
+              {{categoria.tipo}}
+            </option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" (click)="publicar()" data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

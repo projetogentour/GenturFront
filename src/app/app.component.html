@@ -1,5 +1,6 @@
-<app-menu></app-menu>
+<app-menu *ngIf="auth.logado()"></app-menu>
 <app-rodape></app-rodape>
 <router-outlet></router-outlet>
+<!-- <app-cadastrar-produto></app-cadastrar-produto> -->
 
 

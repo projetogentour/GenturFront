@@ -10,15 +10,24 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastrarComponent implements OnInit {
 
+
   usuario: Usuario = new Usuario()
   confirmarSenha: string;
   tipoUsuario: string;
+  // email: = document.querySelector('#email');
 
   constructor(private auth: AuthService, private router: Router) { }
 
-  ngOnInit(){
-    window.scroll(0,0)
+  ngOnInit() {
+    window.scroll(0, 0)
   }
+
+  // validaEmail() {
+  //     if (email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1) {
+  //       email.style.borderBottom = '3px solid var(--dark-red)';
+  //       email.style.color = 'var(--dark-red)';
+  //     }
+  //   }
 
   confirmSenha(event: any) {
     this.confirmarSenha = event.target.value
