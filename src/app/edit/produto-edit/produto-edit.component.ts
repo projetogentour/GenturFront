@@ -19,6 +19,7 @@ export class ProdutoEditComponent implements OnInit {
   categoria: Categoria = new Categoria()
   idCategoria: number
   listaCategoria: Categoria[]
+  idProduto: number
 
 
 
@@ -69,6 +70,13 @@ export class ProdutoEditComponent implements OnInit {
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
       alert('Postagem atualizada com sucesso!')
+      this.router.navigate(['/inicio'])
+    })
+  }
+
+  apagar(){
+    this.produtoService.deleteProduto(this.produto.id).subscribe(()=>{
+      alert('Produto apagado com sucesso!')
       this.router.navigate(['/inicio'])
     })
   }
