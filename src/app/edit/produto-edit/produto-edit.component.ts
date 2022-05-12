@@ -72,4 +72,11 @@ export class ProdutoEditComponent implements OnInit {
       this.router.navigate(['/inicio'])
     })
   }
+
+  apagar(){
+    this.produtoService.deleteProduto(this.produto.id).subscribe(()=>{
+      alert('Produto apagado com sucesso!')
+      this.router.navigate(['/inicio'])
+    })
+  }
 }
