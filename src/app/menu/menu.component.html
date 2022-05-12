@@ -1,3 +1,5 @@
+<!-- !INICIO DA NAVBAR GENTUR -->
+
 <nav class="navbar navbar-expand-lg navbar-light topo">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,6 +30,7 @@
     <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
       <img [src]="foto" onerror="this.src = 'https://cdn-icons-png.flaticon.com/512/848/848006.png' " alt="imagem de perfil" class="rounded-circle img-fluid" width="50">
     </a>
+
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       <a class="dropdown-item" routerLink="/entrar">Login</a>
       <a class="dropdown-item" routerLink="/cadastrar">Cadastrar</a>
@@ -87,9 +90,9 @@
     </form>
   </div>
 </nav></div>
+<!-- !FINAL DA NAVBAR LOGO GENTUR -->
 
-
-
+<!-- !INICIO PRODUTO -->
 <div class="container">
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -102,6 +105,7 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
+
           <label for="titulo">Nome</label>
           <input [(ngModel)]="produto.nome" name="nome" type="text" class="form-control" id="nome" placeholder="Digite o nome do produto">
         </div>
@@ -139,3 +143,4 @@
   </div>
 </div>
 </div>
+<!-- !FINAL PRODUTO -->

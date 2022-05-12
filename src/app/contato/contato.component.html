@@ -1,31 +1,33 @@
 <div class="container">
 <div class="row">
-  <div class="col-md-12">
-    <h1>Entre em contato com GenTur</h1>
+  <div class="col-md-6" id="contato">
+    <h2 class="text-center p-3">Entre em contato com a GenTur</h2>
   </div>
 </div>
+<div class="row">
+  <div class="col-md-12">
 
-  <div class="row d-flex justify-content-center ">
-    <div class="col-md-12">
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Nome</label>
+        <input type="text" id="nome" name="nome" class="form-control" id="exampleFormControlInput1" placeholder="Seu Nome" onkeyup="validaNome()">
+        <div id="txtNome"></div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Endereço de email</label>
+        <input type="email" id="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com" onkeyup="validaEmail()">
+        <div id="txtEmail"></div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Mensagem</label>
+        <textarea class="form-control" id="mensagem" id="exampleFormControlTextarea1" rows="2" onkeyup="validaMensagem()"></textarea>
+        <div id="txtMensagem"></div>
 
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">DIGITE ALGO</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary" routerLink="/entrar">Submit</button>
-      </form>
-
-      <button type="submit" class="btn btn-primary" routerLink="/inicio">HOME</button>
-    </div>
+      </div>
+      <div class="form-group d-flex justify-content-center">
+        <button class="btn btn-outline-dark btn-lg mb-4" routerLink="/entrar">Enviar</button>
+        <button type="submit" class="btn btn-outline-dark btn-lg mb-4" routerLink="/inicio">Inicio</button>
+      </div>
+    </form>
   </div>
 </div>
