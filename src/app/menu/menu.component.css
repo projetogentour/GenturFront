@@ -1,0 +1,53 @@
+ @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+.fs-16 {
+  font-size: 25pt;
+  text-align: center;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.topo{
+  background-color: #1c877cce;
+
+}
+.sair{
+  font-size: 16pt;
+}
+
+.navconteudo {
+
+  background-color: #1C877D;
+}
+/* .navconteudo ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+	} */
+
+  /* .navconteudo ul li {
+    display:inline-block;
+    background-color: #e1eae9;
+    } */
+
+.navconteudo a {
+    padding: 0  18px;
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    line-height:  45px;
+    text-decoration:none;
+    font-weight: bold;
+  }
+
+  .navconteudo a:hover {
+    background-color: #9bd487;
+  }
+
+  .botaoP{
+    color: black;
+    background-color: rgb(2, 236, 236);
+  }

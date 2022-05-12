@@ -1,0 +1,33 @@
+<div class="container">
+<div class="row">
+  <div class="col-md-6" id="contato">
+    <h2 class="text-center p-3">Entre em contato com a GenTur</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Nome</label>
+        <input type="text" id="nome" name="nome" class="form-control" id="exampleFormControlInput1" placeholder="Seu Nome" onkeyup="validaNome()">
+        <div id="txtNome"></div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Endereço de email</label>
+        <input type="email" id="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com" onkeyup="validaEmail()">
+        <div id="txtEmail"></div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Mensagem</label>
+        <textarea class="form-control" id="mensagem" id="exampleFormControlTextarea1" rows="2" onkeyup="validaMensagem()"></textarea>
+        <div id="txtMensagem"></div>
+
+      </div>
+      <div class="form-group d-flex justify-content-center">
+        <button class="btn btn-outline-dark btn-lg mb-4" routerLink="/entrar">Enviar</button>
+        <button type="submit" class="btn btn-outline-dark btn-lg mb-4" routerLink="/inicio">Inicio</button>
+      </div>
+    </form>
+  </div>
+</div>

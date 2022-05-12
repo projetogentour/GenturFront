@@ -1,0 +1,23 @@
+.form-group{
+    padding: 0.1rem;
+  }
+
+  label{
+    padding: 0.1rem;
+  }
+
+  button{
+    margin: 2rem;
+    padding: 0.5rem 0.90rem;
+
+  }
+  /* .logo{
+    text-align: center;
+  } */
+
+  main{
+    padding: 2px 2px;
+    margin: 5px 120px;
+    border-radius: 10px;
+    /* background-color:aqua; */
+  }

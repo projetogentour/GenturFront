@@ -1,0 +1,146 @@
+<!-- !INICIO DA NAVBAR GENTUR -->
+
+<nav class="navbar navbar-expand-lg navbar-light topo">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <li class="nav-item active">
+        <img src="https://cdn.discordapp.com/attachments/971065406712320010/972653607319109642/16519690581188825130.png" alt="" width="70px" height="70px" class="img-fluid rounded-circle">
+      </li>
+      <li class="nav-item pl-3">
+        <p class="m-0 font-weight-bold text-white fs-16">GENTUR</p>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <li class="nav-item pl-3">
+        <a class="m-0 font-weight-bold text-white sair" routerLink="/entrar">Sair <i class="fa fa-sign-out"
+            aria-hidden="true"></i></a>
+      <!-- </li> (click)='sair()' -->
+    </ul>
+  </div>
+</nav>
+
+
+<div ><nav class="navbar navbar-expand-lg navbar-light navconteudo" >
+  <div class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+      <img [src]="foto" onerror="this.src = 'https://cdn-icons-png.flaticon.com/512/848/848006.png' " alt="imagem de perfil" class="rounded-circle img-fluid" width="50">
+    </a>
+
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" routerLink="/entrar">Login</a>
+      <a class="dropdown-item" routerLink="/cadastrar">Cadastrar</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" [routerLink]="['/usuario-edit', id]">Detalhes da conta</a>
+    </div>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link" >  <span class="sr-only">(current)</span></a>
+        </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/inicio">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          Produtos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Decoração</a>
+          <a class="dropdown-item" href="#">Instrumentos</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#produtos">Outros</a>
+        </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+            Serviços
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Guia</a>
+            <a class="dropdown-item" href="#">Viagens</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#servicos">Outros</a>
+          </div>
+      <li class="nav-item">
+        <a class="nav-link" href="#promocao">Promoções</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sobre">Sobre</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModal">Vender</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contato">Contato</a>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+      <button class="btn botaoP my-2 my-sm-0" type="submit">Pesquisar</button>
+    </form>
+  </div>
+</nav></div>
+<!-- !FINAL DA NAVBAR LOGO GENTUR -->
+
+<!-- !INICIO PRODUTO -->
+<div class="container">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Novo Produto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+
+          <label for="titulo">Nome</label>
+          <input [(ngModel)]="produto.nome" name="nome" type="text" class="form-control" id="nome" placeholder="Digite o nome do produto">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Descrição</label>
+          <input [(ngModel)]="produto.descricao" class="form-control" name="descricao" id="descricao" rows="3">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Foto</label>
+          <input [(ngModel)]="produto.foto" class="form-control" name="foto" id="foto" rows="3">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Preço</label>
+          <input [(ngModel)]="produto.preco" class="form-control" name="preco" id="preco" rows="3">
+
+        <div class="form-group">
+          <label for="texto">Escolha uma Categoria! <a routerLink="/categoria" data-dismiss="modal">Categoria</a> </label>
+          <select name="categoria" id="categoria" class="form-control" [(ngModel)]="idCategoria" (change)="findByIdCategoria()">
+            <option *ngFor="let categoria of listaCategoria" value="{{categoria.id}}">
+              {{categoria.tipo}}
+            </option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" (click)="publicar()" data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- !FINAL PRODUTO -->
