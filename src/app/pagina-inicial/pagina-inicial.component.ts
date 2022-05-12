@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
@@ -29,7 +29,8 @@ export class PaginaInicialComponent implements OnInit {
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private auth: AuthService
+    private auth: AuthService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -39,10 +40,11 @@ export class PaginaInicialComponent implements OnInit {
       alert('Voce precisa estar logado para ficar aqui...')
       this.router.navigate(['/entrar'])
     }
+    let id = this.route.snapshot.params['id']
     this.auth.refreshToken()
     this.getProduto()
     this.getCategoria()
-    this.getByIdProduto(this.produto.id)
+    // this.findByIdProduto(id)
 
 
   }
@@ -54,7 +56,7 @@ export class PaginaInicialComponent implements OnInit {
   }
 
   findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+    this.categoriaService.findByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria = resp
     })
   }
@@ -70,8 +72,8 @@ export class PaginaInicialComponent implements OnInit {
       this.usuario = resp
     })
   }
-  getByIdProduto(id: number) {
-    this.produtoService.getByIdProduto(id).subscribe((resp: Produto) => {
+  findByIdProduto(id: number) {
+    this.produtoService.findByIdProduto(id).subscribe((resp: Produto) => {
       this.produto = resp
     })
   }

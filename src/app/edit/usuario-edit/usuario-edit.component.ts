@@ -60,5 +60,26 @@ export class UsuarioEditComponent implements OnInit {
     })
   }
 
+  validaEmail() {
+    let regex = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/
+
+    if (this.usuario.usuario.match(regex)) {
+      let usuario = (<HTMLDivElement>document.querySelector('#usuario'))
+      usuario.style.borderColor = 'green';
+      usuario.style.boxShadow = '0 0 1em green';
+    }
+    else {
+      let usuario = (<HTMLDivElement>document.querySelector('#usuario'))
+      usuario.style.borderColor = 'red';
+      usuario.style.boxShadow = '0 0 1em red';
+    }
+  }
+
+  apagar(){
+    this.auth.deleteUsuario(this.idUsuario).subscribe(()=>{
+      alert('Usuario apagado com sucesso!')
+      this.router.navigate(['/entrar'])
+    })
+  }
 
 }

@@ -20,7 +20,7 @@ export class ProdutoService {
     return this.http.get<Produto[]>('http://localhost:8080/produto', this.token)
   }
 
-  getByIdProduto(id: number): Observable<Produto> {
+  findByIdProduto(id: number): Observable<Produto> {
     return this.http.get<Produto>(`http://localhost:8080/produto/${id}`, this.token)
   }
 

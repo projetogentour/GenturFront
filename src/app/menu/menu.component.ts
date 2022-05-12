@@ -45,10 +45,13 @@ export class MenuComponent implements OnInit {
     //   alert('Voce precisa estar logado para ficar aqui...')
     //   this.router.navigate(['/entrar'])
     // }
+    let id = this.route.snapshot.params['id']
     this.auth.refreshToken()
+    // this.findByIdProduto(id)
     this.getProduto()
     this.getCategoria()
     this.findByIdUsuario()
+
   }
 
   getCategoria() {
@@ -58,7 +61,7 @@ export class MenuComponent implements OnInit {
   }
 
   findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+    this.categoriaService.findByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria = resp
     })
   }
@@ -72,6 +75,12 @@ export class MenuComponent implements OnInit {
   findByIdUsuario() {
     this.auth.findByIdUsuario(this.idUsuario).subscribe((resp: Usuario) => {
       this.usuario = resp
+    })
+  }
+
+  findByIdProduto(id: number) {
+    this.produtoService.findByIdProduto(id).subscribe((resp: Produto) => {
+      this.produto = resp
     })
   }
 
@@ -97,5 +106,5 @@ export class MenuComponent implements OnInit {
     environment.foto = ''
     environment.id = 0
   }
-  
+
 }

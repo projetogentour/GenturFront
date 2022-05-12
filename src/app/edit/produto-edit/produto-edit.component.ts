@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { Produto } from 'src/app/model/Produto';
 import { AuthService } from 'src/app/service/auth.service';
+import { CategoriaService } from 'src/app/service/categoria.service';
+import { ProdutoService } from 'src/app/service/produto.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -17,13 +19,15 @@ export class ProdutoEditComponent implements OnInit {
   categoria: Categoria = new Categoria()
   idCategoria: number
   listaCategoria: Categoria[]
-  produtoService: any;
-  categoriaService: any;
+
+
 
   constructor(
     private auth: AuthService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private categoriaService: CategoriaService,
+    private produtoService: ProdutoService
   ) { }
 
   ngOnInit() {
@@ -35,19 +39,19 @@ export class ProdutoEditComponent implements OnInit {
     }
     this.auth.refreshToken()
     let id = this.route.snapshot.params['id']
-    this.getByIdProduto(id)
+    this.findByIdProduto(id)
     this.getCategoria()
     this.findByIdCategoria()
   }
 
-  getByIdProduto(id: number) {
-    this.produtoService.getByIdProduto(id).subscribe((resp: Produto) => {
+  findByIdProduto(id: number) {
+    this.produtoService.findByIdProduto(id).subscribe((resp: Produto) => {
       this.produto = resp
     })
   }
 
   findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+    this.categoriaService.findByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria = resp
     })
   }

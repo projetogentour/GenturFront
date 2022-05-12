@@ -50,4 +50,19 @@ export class CadastrarComponent implements OnInit {
       alert('Senhas erradas')
     }
   }
+
+  validaEmail() {
+    let regex = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/
+
+    if (this.usuario.usuario.match(regex)) {
+      let usuario = (<HTMLDivElement>document.querySelector('#usuario'))
+      usuario.style.borderColor = 'green';
+      usuario.style.boxShadow = '0 0 1em green';
+    }
+    else {
+      let usuario = (<HTMLDivElement>document.querySelector('#usuario'))
+      usuario.style.borderColor = 'red';
+      usuario.style.boxShadow = '0 0 1em red';
+    }
+  }
 }

@@ -67,11 +67,12 @@
         </div>
         <div class="card_content">
           <h2 class="card_title">{{produto.nome}}</h2>
+          <p class="card_text"><span>Categoria: {{produto.categoria.tipo}}</span></p>
           <p class="card_text">
             {{produto.descricao}}
           </p>
           <button class="btn card_btn">R$: {{produto.preco}}</button>
-          <button class="btn card_btn" [routerLink]="['/postagem-edit', produto.id]">Editar</button>
+          <button class="btn card_btn" [routerLink]="['/produto-edit', produto.id]">Editar</button>
         </div>
       </div>
     </div>
