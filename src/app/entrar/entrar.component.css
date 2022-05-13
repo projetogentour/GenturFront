@@ -1,24 +1,24 @@
 /*Arredondamento da borda do card*/
 .borda {
-  height: 380px;
-  border-radius: 20px;
-}
-
-/*cabeçalho com imagem*/
-.header {
-  background: url(https://images.pexels.com/photos/1595739/pexels-photo-1595739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
-  position: relative;
-  background-size: cover;
-}
-
-/*Posição da imagem na página*/
-.page-caption {
-  padding-top: 170px;
-  padding-bottom: 174px;
-}
-
-/*Posição do card na página*/
-.posicao-card {
-  position: relative;
-  bottom: 200px;
-}
+	height: 380px;
+	border-radius: 20px;
+  }
+  
+  /*cabeçalho com imagem*/
+  .header {
+	background: url(https://images.pexels.com/photos/1595739/pexels-photo-1595739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+	position: relative;
+	background-size: cover;
+  }
+  
+  /*Posição da imagem na página*/
+  .page-caption {
+	padding-top: 170px;
+	padding-bottom: 174px;
+  }
+  
+  /*Posição do card na página*/
+  .posicao-card {
+	position: relative;
+	bottom: 200px;
+  }
