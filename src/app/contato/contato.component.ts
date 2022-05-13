@@ -12,4 +12,11 @@ export class ContatoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  enviarMensagem(){
+    window.scroll(0,0)
+  }
+
+
+
+
 }
