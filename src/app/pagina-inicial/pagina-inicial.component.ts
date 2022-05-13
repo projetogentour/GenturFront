@@ -29,7 +29,7 @@ export class PaginaInicialComponent implements OnInit {
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private auth: AuthService,
+    public auth: AuthService,
     private route: ActivatedRoute
   ) { }
 
@@ -41,9 +41,14 @@ export class PaginaInicialComponent implements OnInit {
     //   this.router.navigate(['/entrar'])
     // }
     let id = this.route.snapshot.params['id']
-    this.auth.refreshToken()
     this.getProduto()
     this.getCategoria()
+    
+    this.produtoService.refreshToken()
+    this.auth.refreshToken()
+    this.categoriaService.refreshToken()
+
+
     // this.findByIdProduto(id)
 
 
@@ -61,14 +66,14 @@ export class PaginaInicialComponent implements OnInit {
     })
   }
 
-  getProduto(){
-    this.produtoService.getProduto().subscribe((resp: Produto[])=>{
+  getProduto() {
+    this.produtoService.getProduto().subscribe((resp: Produto[]) => {
       this.listaProduto = resp
     })
   }
 
-  findByIdUsuario(){
-    this.auth.findByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
+  findByIdUsuario() {
+    this.auth.findByIdUsuario().subscribe((resp: Usuario) => {
       this.usuario = resp
     })
   }
@@ -78,18 +83,18 @@ export class PaginaInicialComponent implements OnInit {
     })
   }
 
-  publicar() {
-    this.categoria.id = this.idCategoria
-    this.produto.categoria = this.categoria
+  // publicar() {
+  //   this.categoria.id = this.idCategoria
+  //   this.produto.categoria = this.categoria
 
-    this.usuario.id = this.idUsuario
-    this.produto.usuario = this.usuario
+  //   this.usuario.id = this.idUsuario
+  //   this.produto.usuario = this.usuario
 
-    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
-      this.produto = resp
-      alert('Produto realizada com sucesso!')
-      this.produto = new Produto()
-      this.getProduto()
-    })
-  }
+  //   this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+  //     this.produto = resp
+  //     alert('Produto realizada com sucesso!')
+  //     this.produto = new Produto()
+  //     this.getProduto()
+  //   })
+  // }
 }

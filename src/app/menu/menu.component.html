@@ -16,8 +16,8 @@
       </li>
     </ul>
     <ul class="navbar-nav ml-auto d-flex align-items-center">
-      <li class="nav-item pl-3" *ngIf="auth.logado()">
-        <a class="m-0 font-weight-bold text-white sair" (click)="sair()">Sair <i class="fa fa-sign-out"
+      <li class="nav-item pl-3" >
+        <a class="m-0 font-weight-bold text-white sair" *ngIf="auth.logado()" (click)="sair()">Sair <i class="fa fa-sign-out"
             aria-hidden="true"></i></a>
       </li>
       <li class="nav-item pl-3" *ngIf="!auth.logado()">
@@ -30,14 +30,12 @@
 
 
 <div ><nav class="navbar navbar-expand-lg navbar-light navconteudo" >
-  <div class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+  <div *ngIf="auth.logado()" class="nav-item dropdown">
+    <a (click)="findByIdUsuario()" class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
       <img [src]="foto" onerror="this.src ='https://cdn-icons-png.flaticon.com/512/5768/5768496.png' " alt="imagem de perfil" class="rounded-circle img-fluid" width="50">
     </a>
 
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" routerLink="/entrar">Login</a>
-      <a class="dropdown-item" routerLink="/cadastrar">Cadastrar</a>
+    <div  class="dropdown-menu" aria-labelledby="navbarDropdown">
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" [routerLink]="['/usuario-edit', id]">Detalhes da conta</a>
     </div>
@@ -80,7 +78,7 @@
       <li class="nav-item">
         <a class="nav-link" href="#sobre">Sobre</a>
       </li>
-      <li class="nav-item">
+      <li *ngIf="auth.logado()" class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal">Vender</a>
       </li>
       <li class="nav-item">

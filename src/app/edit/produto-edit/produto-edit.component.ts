@@ -37,7 +37,7 @@ export class ProdutoEditComponent implements OnInit {
       // alert('Voce precisa estar logado para ficar aqui...')
       this.router.navigate(['/entrar'])
     }
-    this.auth.refreshToken()
+    this.produtoService.refreshToken()
     let id = this.route.snapshot.params['id']
     this.findByIdProduto(id)
     this.getCategoria()

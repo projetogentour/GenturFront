@@ -2,6 +2,7 @@ import { TemplateLiteral } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
+import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -11,11 +12,14 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./categoria-edit.component.css'],
 })
 export class CategoriaEditComponent implements OnInit {
+
   categoria: Categoria = new Categoria();
+
   constructor(
     private categoriaService: CategoriaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private auth: AuthService
   ) {}
 
   ngOnInit() {
@@ -25,12 +29,13 @@ export class CategoriaEditComponent implements OnInit {
       // alert('Voce precisa estar logado para ficar aqui...')
       this.router.navigate(['/entrar']);
     }
+    this.categoriaService.refreshToken()
     let id = this.route.snapshot.params['id'];
     this.findByIdCategoria(id);
   }
 
   findByIdCategoria(id: number) {
-    this.categoriaService.getByIdCategoria(id).subscribe((resp: Categoria) => {
+    this.categoriaService.findByIdCategoria(id).subscribe((resp: Categoria) => {
       this.categoria = resp;
     });
   }
