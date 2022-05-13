@@ -1,63 +1,24 @@
+/*Arredondamento da borda do card*/
+.borda {
+  height: 380px;
+  border-radius: 20px;
+}
 
-		body,
-		html {
-			margin: 10;
-			padding: 0;
-			height: 50%;
-			background: #60a3bc!important;
-		}
-		.user_card {
-			height: 400px;
-			width: 350px;
-			margin-top: auto;
-			margin-bottom: auto;
-			background: #9cd587;
-			position: relative;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			padding: 50px;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
+/*cabeçalho com imagem*/
+.header {
+  background: url(https://images.pexels.com/photos/1595739/pexels-photo-1595739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+  position: relative;
+  background-size: cover;
+}
 
-		}
-		.brand_logo_container {
-			position: absolute;
-			height: 170px;
-			width: 170px;
-			top: -75px;
-			border-radius: 50%;
-			background: #60a3bc;
-			padding: 10px;
-			text-align: center;
-		}
+/*Posição da imagem na página*/
+.page-caption {
+  padding-top: 170px;
+  padding-bottom: 174px;
+}
 
-		
-		.form_container {
-			margin-top: 100px;
-		}
-		.login_btn {
-			width: 100%;
-			background: #1c877d !important;
-			color: white !important;
-		}
-		.login_btn:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
-		.login_container {
-			padding: 0 2rem;
-		}
-		.input-group-text {
-			background: #1c877d !important;
-			color: white !important;
-			border: 0 !important;
-			border-radius: 0.25rem 0 0 0.25rem !important;
-		}
-		.input_user,
-		.input_pass:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
+/*Posição do card na página*/
+.posicao-card {
+  position: relative;
+  bottom: 200px;
+}
