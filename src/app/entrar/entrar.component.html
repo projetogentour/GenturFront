@@ -62,13 +62,13 @@
             <div class="p-4">
               <div class="input-group mb-3">
                 <span class="input-group-text bg-primary"><i class="bi bi-person-plus-fill text-white"></i></span>
-                <input type="text" class="form-control" placeholder="Usuário" [(ngModel)]="usuarioLogin.usuario">
+                <input type="text" class="form-control" placeholder="Usuário" name="usuario" [(ngModel)]="usuarioLogin.usuario">
               </div>
               <div class="input-group mb-3">
                 <span class="input-group-text bg-primary"><i class="bi bi-key-fill text-white"></i></span>
-                <input type="password" class="form-control" placeholder="Senha"[(ngModel)]="usuarioLogin.senha">
+                <input type="password" class="form-control" name="senha" placeholder="Senha"[(ngModel)]="usuarioLogin.senha">
               </div>
-              
+
 			  <div class="d-flex justify-content-center mt-3 login_container">
               <button class=" btn btn-primary text-center mt-2"   (click)="entrar()" type="submit">
                 Entrar
@@ -85,5 +85,5 @@
   </div>
 </body>
 
-</html> 
+</html>
 
