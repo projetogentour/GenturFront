@@ -59,7 +59,7 @@
   <h2>Produtos</h2>
 </div>
 
-<div class="cards">
+<!-- <div class="cards">
   <div class="cards_item" *ngFor="let produto of listaProduto">
     <div class="card">
       <div class="card_image">
@@ -83,34 +83,37 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+<div class="global">
+  <div class="container" >
+      <div class="card" *ngFor="let produto of listaProduto">
+        <div class="card-header"  >
+          <img src="{{ produto.foto }}" />
 
-<!-- CARD MAIS PRODUTOS -->
-<!-- <div class="card p-2">
-    <div class="card-header">Produtos feito a mão</div>
-    <div class="card-body">
-      <h5 class="card-title">Sei la</h5>
-      <p class="card-text">algum texto aqui .</p>
-      <a href="#" class="btn btn-primary">Encontre mais produtos</a>
-    </div>
-  </div> -->
-<!-- \CARD MAIS PRODUTOS -->
+        </div>
 
-<!-- FIM DA PARTE DE PRODUTOS  -->
+        <div class="card-body">
+          <span class="tag tag-teal">{{ produto.categoria.tipo }}</span>
 
-<!-- ABA SERVICOS -->
-<!-- <div class="secao" id="servicos">
-  <h2>Serviços</h2>
-</div>
-<div class="separacao">
-  <div class="containeer cardS">
-    <div class="cardes card1">
-      <p>Marcela - Guia</p>
-      <div class="bottom-bar"><a>SAIBA MAIS</a></div>
+          <h4>
+              {{ produto.nome }}
+          </h4>
+          <p>
+              {{ produto.descricao }}
+          </p>
+          <button class="btn card_btn">R$: {{ produto.preco }}</button>
+          <button
+            class="btn card_btn"
+            [routerLink]="['/produto-edit', produto.id]"
+          >
+            Editar
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-</div> -->
-<!-- \ABA SERVICOS -->
+
+
 <hr />
 <div class="jumbotron d-block" id="sobre">
   <div class="container">
