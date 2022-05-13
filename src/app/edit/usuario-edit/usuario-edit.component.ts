@@ -79,6 +79,10 @@ export class UsuarioEditComponent implements OnInit {
     this.auth.deleteUsuario(this.idUsuario).subscribe(()=>{
       alert('Usuario apagado com sucesso!')
       this.router.navigate(['/entrar'])
+      environment.token = ''
+      environment.nome = ''
+      environment.foto = ''
+      environment.id = 0
     })
   }
 

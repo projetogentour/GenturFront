@@ -36,10 +36,10 @@ export class PaginaInicialComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0)
 
-    if (environment.token == '') {
-      alert('Voce precisa estar logado para ficar aqui...')
-      this.router.navigate(['/entrar'])
-    }
+    // if (environment.token == '') {
+    //   alert('Voce precisa estar logado para ficar aqui...')
+    //   this.router.navigate(['/entrar'])
+    // }
     let id = this.route.snapshot.params['id']
     this.auth.refreshToken()
     this.getProduto()

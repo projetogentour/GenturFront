@@ -13,7 +13,7 @@ import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.componen
 
 
 const routes: Routes = [
-  { path:'', redirectTo:'entrar', pathMatch:'full'},
+  { path:'', redirectTo:'inicio', pathMatch:'full'},
 
   { path:'inicio', component: PaginaInicialComponent },
   { path:'contato', component: ContatoComponent },

@@ -34,7 +34,7 @@ export class MenuComponent implements OnInit {
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private auth: AuthService,
+    public auth: AuthService,
     private route: ActivatedRoute
   ) { }
 

@@ -16,10 +16,14 @@
       </li>
     </ul>
     <ul class="navbar-nav ml-auto d-flex align-items-center">
-      <li class="nav-item pl-3">
-        <a class="m-0 font-weight-bold text-white sair" routerLink="/entrar">Sair <i class="fa fa-sign-out"
+      <li class="nav-item pl-3" *ngIf="auth.logado()">
+        <a class="m-0 font-weight-bold text-white sair" (click)="sair()">Sair <i class="fa fa-sign-out"
             aria-hidden="true"></i></a>
-      <!-- </li> (click)='sair()' -->
+      </li>
+      <li class="nav-item pl-3" *ngIf="!auth.logado()">
+        <a class="m-0 font-weight-bold text-white sair" routerLink="/entrar">Entrar <i class="fa fa-sign-out"
+            aria-hidden="true"></i></a>
+      </li>
     </ul>
   </div>
 </nav>
