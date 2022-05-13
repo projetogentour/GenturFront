@@ -1,1 +1,12 @@
+
 <app-contato></app-contato>
+
+<app-menu *ngIf="auth.logado()"></app-menu>
+<router-outlet></router-outlet>
+<app-rodape></app-rodape>
+
+
+<!-- <app-cadastrar-produto></app-cadastrar-produto> -->
+
+
+

@@ -1,0 +1,220 @@
+
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #000000;
+  padding: 0.8rem;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(0, 44, 120, 0.777);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(0, 25, 53, 0.601);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+}
+
+.card_content {
+  padding: 1rem;
+  /* background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%); */
+  background-color: rgba(95, 158, 160, 0.465);
+}
+
+.card_title {
+  color: #000000;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #2e2d2d;
+  font-size: 1.0rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+.made_by{
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+/* CARD SERVICO */
+
+
+.containeer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  margin:100px 0px;
+  max-width:100%;
+}
+
+.cardes{
+  width:250px;
+  height:300px;
+  background:#fff;
+  margin:15px;
+  border-radius:15px;
+  box-shadow:0px 0px 15px 0px #313131;
+  background-size:102%;
+  background-repeat:no-repeat;
+  background-position:top center;
+  position:relative;
+  overflow:hidden;
+}
+.cardes:hover {
+  box-shadow: 0 8px 17px 0 rgba(17, 186, 189, 0.839);
+  cursor: pointer;
+}
+
+.card1{
+  background-image:url("https://img.freepik.com/fotos-gratis/mulher-corporativa-olhando-para-o-telefone_23-2148336919.jpg?size=626&ext=jpg");
+}
+.card2{
+  background-image:url("https://img.freepik.com/fotos-gratis/mulher-corporativa-olhando-para-o-telefone_23-2148336919.jpg?size=626&ext=jpg");
+  /* or
+  background-image:url("https://i.hizliresim.com/gp7wjgg.jpg");*/
+}
+.card3{
+  background-image:url("https://img.freepik.com/fotos-gratis/mulher-corporativa-olhando-para-o-telefone_23-2148336919.jpg?size=626&ext=jpg");
+}
+
+.bottom-bar{
+  width:100%;
+  height:45px;
+  position:absolute;
+  bottom:-100%;
+  background:mediumslateblue;
+  transition:all 0.3s;
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:99;
+  border-top:1px solid #3333;
+}
+
+.cardes:hover .bottom-bar{
+  bottom:0px;
+}
+.cardes a{
+  cursor:pointer;
+  padding:5px 10px;
+  border-radius:4px;
+  color:whitesmoke;
+}
+.cardes a:hover{
+  background:#3333;
+  color:white;
+
+}
+
+.cardes p{
+  text-align:center;
+  position:absolute;
+  width:100%;
+  bottom:-5px;
+  font-size:18px;
+  color:mediumslateblue;
+}
+/******************RESPONSIVE***********************/
+@media screen and (max-width:500px){
+  .cardes{
+    margin:15px 5px;
+    width:245px;
+    height:295px;
+  }
+  .bottom-bar{
+    height:46px;
+  }
+}
+
+
+/* .carousel-inner > .carousel-item > img {
+  width: 600px;
+  height: 800px;
+} */
+.carousel-item {
+  height: 50vh;
+}
+
+.secao {
+  background-color: rgba(0, 255, 255, 0.149);
+  text-align: center;
+  padding: 2px;
+  margin: 25px;
+}

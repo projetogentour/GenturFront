@@ -3,31 +3,6 @@ a{
   cursor: pointer;
 }
 
-ul.redes-sociais{
-  list-style: none;
-  padding: 0;
-
-}
-
-ul.redes-sociais li {
-  display: inline;
-  padding: 5px;
-}
-
-.fa {
-  font-size: 25pt;
-  color: white;
-  padding: 10px;
-}
-
-.fa-linkedin:hover {
-  color: #0a66c2;
-}
-
-.fa-github:hover{
-  color: #24292F;
-}
-
-.fa-instagram:hover{
-  color:     #f1600c;
+footer{
+  background-color: #1c877c9a;
 }

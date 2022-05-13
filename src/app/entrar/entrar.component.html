@@ -1,17 +1,45 @@
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary" routerLink="/cadastrar">cadastro</button>
-</form>
-<button type="submit" class="btn btn-primary" routerLink="/inicio">HOME</button>
+
+<body>
+	<div class="container ">
+		<div class="d-flex justify-content-center mt-5 ">
+			<div class="user_card mt-5" >
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="../../assets/img/logoGenTur.png" class="brand_logo img-fluid rounded-circle" alt="Logo GenTur">
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form>
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fa fa-user"></i></span>
+							</div>
+							<input type="text" name="usuario" class="form-control input_user"  placeholder="email@email.com" [(ngModel)]="usuarioLogin.usuario" >
+						</div>
+
+						<div class="input-group mb-3 ">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fa fa-key"></i></span>
+							</div>
+							<input type="password" name="senha" class="form-control input_pass" placeholder="senha" [(ngModel)]="usuarioLogin.senha">
+						</div>
+						<div class="form-group">
+						</div>
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 	<button type="button" name="button" class="btn login_btn" (click)="entrar()">Entrar</button>
+				   </div>
+					</form>
+				</div>
+
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Não tem conta? <a routerLink="/cadastrar" class="ml-2">Cadastre-se</a>
+					</div>
+					<div class="d-flex justify-content-center links">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
