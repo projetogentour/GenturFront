@@ -1,93 +1,94 @@
 
-<div id="header-hero">
-  <div class="header-bg"> <img src="https://images.pexels.com/photos/57021/pexels-photo-57021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="header-image" /> </div>
+<div class="banner">
+  <span class="background"></span>
   <div class="header-content">
-    <p class="heading-1">GENTUR</p>
-    <h1>A maior loja <span class="logo-style">cultural</span> do Brasil</h1>
-    <p class="description"></p>
-    <div class="button">
-      <p>Compre e Venda conosco :) </p>
+    <h1> <span class="logo-style">GENTUR</span></h1>
+  </div>
+</div>
+
+
+<div class="container-fluid bg text-light py-4">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <h1 class="tituloSobre">Sobre a Gentur</h1>
+        <p class="sobre">Somos um guia de vendas de produtores locais, onde o foco é expandir a
+          cultura do Brasil! O foco do turismo esta em cidades mais conhecidas, e
+          queremos trazer produtos e serviços de pessoas que lutam diariamente para
+          serem vistas!!</p>
+          <p class="mais"><a href="https://github.com/projetogentour" >Descubra mais</a></p>
+      </div>
+
+      <div class="col-md-6">
+        <img src="https://images.pexels.com/photos/57428/parrot-colorful-plumage-portrait-57428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="imagem de fundo" width="500px" height="500px" class="img-fluid">
+      </div>
     </div>
   </div>
 </div>
 
-<section id="summer-collection">
-<div class="container">
-  <div class="sc-content">
-    <h1>Sobre a Gentur</h1>
-    <p class="description"> Somos um guia de vendas de produtores locais, onde o foco é expandir a
-      cultura do Brasil! O foco do turismo esta em cidades mais conhecidas, e
-      queremos trazer produtos e serviços de pessoas que lutam diariamente para
-      serem vistas!.</p>
-    <a href="https://github.com/projetogentour" >Descubra mais</a> </div>
-  <div class="sc-media">
-    <div class="sc-media-bg"> <img src="https://images.pexels.com/photos/1266446/pexels-photo-1266446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="sc-image" /></div>
-  </div>
-</div>
-</section>
+<hr>
 
+  <!-- INICIO MAIN PRODUTOS -->
+  <section id="products">
+    <!-- <div class="container"> -->
+      <div class="products-header">
+        <h2 class="text-center" id="produtos">Produtos e Serviços</h2>
 
-<!-- INICIO MAIN PRODUTOS -->
-<section id="products">
-  <!-- <div class="container"> -->
-    <div class="products-header">
-      <h2 class="text-center" id="produtos">Produtos e Serviços</h2>
+        <div class="global">
+          <div class="contai" >
+              <div class="card" *ngFor="let produto of listaProduto">
+                <div class="card-header"  >
+                  <img src="{{ produto.foto }}" />
 
-      <div class="global">
-        <div class="contai" >
-            <div class="card" *ngFor="let produto of listaProduto">
-              <div class="card-header"  >
-                <img src="{{ produto.foto }}" />
+                </div>
 
-              </div>
+                <div class="card-body">
+                  <span class="tag tag-teal">{{ produto.categoria.tipo }}</span>
 
-              <div class="card-body">
-                <span class="tag tag-teal">{{ produto.categoria.tipo }}</span>
-
-                <h4>
-                    {{ produto.nome }}
-                </h4>
-                <p>
-                    {{ produto.descricao }}
-                </p>
-                <button class="btn card_btn">R$: {{ produto.preco }}</button>
-                <button
-                  class="btn btn-danger  card_btn"
-                  [routerLink]="['/produto-edit', produto.id]"
-                >
-                  Editar
-                </button>
+                  <h4>
+                      {{ produto.nome }}
+                  </h4>
+                  <p>
+                      {{ produto.descricao }}
+                  </p>
+                  <button class="btn card_btn">R$: {{ produto.preco }}</button>
+                  <button
+                    class="btn btn-danger  card_btn"
+                    [routerLink]="['/produto-edit', produto.id]"
+                  >
+                    Editar
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-  </div>
+    </div>
 
-  <section id="blog">
-		<div class="container">
-			<div class="blog-header">
-				<h2>Histórias</h2>
-				<p>Conheça a histórias de produtores!</p>
-			</div>
-			<div class="blog-content">
-				<div class="blog-1">
-					<div class="blog-1-image-holder"> <img src="https://images.pexels.com/photos/9622946/pexels-photo-9622946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="image"> </div>
-					<div class="blog-1-content">
-						<h4>Marcos do facao</h4>
-						<h3>Lorem ipsum dolor sit amet.</h3>
-						<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					</div>
-				</div>
-				<div class="blog-2">
-					<div class="blog-2-image-holder"> <img src="https://images.pexels.com/photos/8404740/pexels-photo-8404740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="image"> </div>
-					<div class="blog-2-content">
-						<h4>Lorem Ipsum</h4>
-						<h3>Lorem ipsum dolor sit amet.</h3>
-						<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section id="blog">
+      <div class="container">
+          <div class="blog-header">
+              <h2>Histórias</h2>
+              <p>Conheça a histórias de produtores!</p>
+          </div>
+          <div class="blog-content">
+              <div class="blog-1">
+                  <div class="blog-1-image-holder"> <img src="https://images.pexels.com/photos/9622946/pexels-photo-9622946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="image"> </div>
+                  <div class="blog-1-content">
+                      <h4>Marcos do facao</h4>
+                      <h3>Lorem ipsum dolor sit amet.</h3>
+                      <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                  </div>
+              </div>
+              <div class="blog-2">
+                  <div class="blog-2-image-holder"> <img src="https://images.pexels.com/photos/8404740/pexels-photo-8404740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="image"> </div>
+                  <div class="blog-2-content">
+                      <h4>Lorem Ipsum</h4>
+                      <h3>Lorem ipsum dolor sit amet.</h3>
+                      <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
-<hr />
+
