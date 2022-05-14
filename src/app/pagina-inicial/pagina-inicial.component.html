@@ -23,7 +23,7 @@
           cultura do Brasil! O foco do turismo esta em cidades mais conhecidas, e
           queremos trazer produtos e serviços de pessoas que lutam diariamente para
           serem vistas!!!</p>
-          <p class="mais"><a href="https://github.com/projetogentour" >Descubra mais</a></p>
+          <p class="mais"><a target="_blank" href="https://github.com/projetogentour" >Descubra mais</a></p>
       </div>
 
       <div class="col-md-6">
@@ -42,7 +42,7 @@
 <section id="products">
   <!-- <div class="container"> -->
   <div class="products-header">
-    <h2 class="text-center" id="produtos">Produtos e Serviços</h2>
+    <h2 class="text-center p-5" id="produtos">Produtos e Serviços</h2>
 
     <div class="global">
       <div class="contai">
@@ -55,18 +55,18 @@
           <div class="card-body">
             <span class="tag tag-teal">{{ produto.categoria.tipo }}</span>
 
-            <h4>
+            <h4 class="nomeProduto">
               {{ produto.nome }}
             </h4>
-            <p>
-              {{ produto.descricao }}
+            <p>{{ produto.descricao }}
             </p>
-            <button class="btn card_btn">R$: {{ produto.preco }}</button>
-            <button *ngIf="auth.logado()" class="btn btn-danger  card_btn" [routerLink]="['/produto-edit', produto.id]">
-              Editar
-            </button>
-            <button class="btn btn-danger  card_btn" href="">
+            <p class="card_btn">R$:{{produto.preco }}</p>
+
+            <button class="btn btnCor  " href="">
               COMPRAR
+            </button>
+            <button *ngIf="auth.logado()" class="btn btn-danger " [routerLink]="['/produto-edit', produto.id]">
+              Editar
             </button>
           </div>
         </div>
@@ -78,7 +78,7 @@
     <div class="container">
       <div class="blog-header">
         <h2>Histórias</h2>
-        <p>Conheça a histórias de produtores!</p>
+        <p>Conheça a breve história de produtores!</p>
       </div>
       <div class="blog-content">
         <div class="blog-1">
@@ -86,10 +86,10 @@
               src="https://images.pexels.com/photos/9622946/pexels-photo-9622946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               alt="image"> </div>
           <div class="blog-1-content">
-            <h4>Marcos do facao</h4>
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <h3>Marcos do facao</h3>
+            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..</h5>
           </div>
         </div>
         <div class="blog-2">
@@ -97,14 +97,14 @@
               src="https://images.pexels.com/photos/8404740/pexels-photo-8404740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
               alt="image"> </div>
           <div class="blog-2-content">
-            <h4>Lorem Ipsum</h4>
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <h3>Lorem Ipsum</h3>
+            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h5>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 </section>
->>>>>>> 665e61941379157cb7a754020cc43cae941bda3c

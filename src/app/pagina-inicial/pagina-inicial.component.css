@@ -9,7 +9,21 @@
   backface-visibility: hidden;
 }
 
+h4{
+  text-transform: uppercase;
+  padding: 8px;
+  text-align: center;
 
+}
+.btnCor {
+  background-color: #029248d1;
+  color: white;
+}
+
+.card_btn{
+  color:#000000;
+  font-size: 23px;
+}
 .banner .background {
   width: 100%;
   height: 100%;
@@ -18,20 +32,22 @@
   top: 0;
   z-index: -1;
   /* transform: translate3d(0,0,0) scale(1.25); */
-  background: black url("https://images.pexels.com/photos/94296/pexels-photo-94296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center center;
+  background: black url("https://images.pexels.com/photos/3811842/pexels-photo-3811842.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260") no-repeat center center;
   background-size: cover;
  }
 .banner h1 {
   color: #EEE;
   margin: 0;
   text-align: center;
-  line-height: 30rem;
+  line-height: 35rem;
   text-transform: uppercase;
-  text-shadow: 0 0 .3rem black;
+  text-shadow: 0 0 .9rem rgb(0, 255, 72);
+  font-size: 60px;
+
 }
 
 .logo-style{
-  color: #16ff87;
+  color: #ffffff;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-style:italic;
 }
@@ -83,7 +99,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: #f7f8fc7c;
+  background-color: #f7f8fc23;
   color: #000105;
 }
 
