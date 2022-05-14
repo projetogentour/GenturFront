@@ -30,6 +30,15 @@
   text-shadow: 0 0 .3rem black;
 }
 
+.logo-style{
+  color: #16ff87;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style:italic;
+}
+
+.mn{
+  background-color: #16ff8700;
+}
 
 #products {
   width: 100%;
