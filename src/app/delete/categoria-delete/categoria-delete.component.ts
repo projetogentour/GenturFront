@@ -26,13 +26,15 @@ export class CategoriaDeleteComponent implements OnInit {
       // alert('Voce precisa estar logado para ficar aqui...')
       this.router.navigate(['/entrar']);
     }
+    
+    this.categoriaService.refreshToken()
     this.idCategoria = this.route.snapshot.params['id'];
     this.findByIdCategoria(this.idCategoria);
   }
 
 
   findByIdCategoria(id: number){
-    this.categoriaService.getByIdCategoria(id).subscribe((resp: Categoria) =>{
+    this.categoriaService.findByIdCategoria(id).subscribe((resp: Categoria) =>{
       this.categoria = resp
     })
   }

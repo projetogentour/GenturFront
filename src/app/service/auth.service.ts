@@ -12,6 +12,8 @@ export class AuthService {
 
   constructor(  private http: HttpClient ) { }
 
+  idUsuario: number
+
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
@@ -36,8 +38,8 @@ export class AuthService {
     return this.http.delete(`http://localhost:8080/usuarios/${id}`, this.token)
   }
 
-  findByIdUsuario(id: number): Observable<Usuario>{
-    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`, this.token)
+  findByIdUsuario(): Observable<Usuario>{
+    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${this.idUsuario}`, this.token)
   }
 
   logado(){

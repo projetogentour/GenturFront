@@ -46,12 +46,14 @@ export class MenuComponent implements OnInit {
     //   this.router.navigate(['/entrar'])
     // }
     let id = this.route.snapshot.params['id']
+
+    this.produtoService.refreshToken()
     this.auth.refreshToken()
+    this.categoriaService.refreshToken()
     // this.findByIdProduto(id)
     this.getProduto()
     this.getCategoria()
-    this.findByIdUsuario()
-
+    // this.findByIdUsuario()
   }
 
   getCategoria() {
@@ -73,7 +75,7 @@ export class MenuComponent implements OnInit {
   }
 
   findByIdUsuario() {
-    this.auth.findByIdUsuario(this.idUsuario).subscribe((resp: Usuario) => {
+    this.auth.findByIdUsuario().subscribe((resp: Usuario) => {
       this.usuario = resp
     })
   }
@@ -85,6 +87,7 @@ export class MenuComponent implements OnInit {
   }
 
   publicar() {
+    this.produtoService.refreshToken()
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
 

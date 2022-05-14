@@ -5,6 +5,7 @@ import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
+import { CarrinhoService } from '../service/carrinho.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -29,8 +30,9 @@ export class PaginaInicialComponent implements OnInit {
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private auth: AuthService,
-    private route: ActivatedRoute
+    public auth: AuthService,
+    private route: ActivatedRoute,
+    private carrinho: CarrinhoService
   ) { }
 
   ngOnInit() {
@@ -41,9 +43,14 @@ export class PaginaInicialComponent implements OnInit {
     //   this.router.navigate(['/entrar'])
     // }
     let id = this.route.snapshot.params['id']
-    this.auth.refreshToken()
     this.getProduto()
     this.getCategoria()
+
+    this.produtoService.refreshToken()
+    this.auth.refreshToken()
+    this.categoriaService.refreshToken()
+
+
     // this.findByIdProduto(id)
 
 
@@ -61,35 +68,41 @@ export class PaginaInicialComponent implements OnInit {
     })
   }
 
-  getProduto(){
-    this.produtoService.getProduto().subscribe((resp: Produto[])=>{
+  getProduto() {
+    this.produtoService.getProduto().subscribe((resp: Produto[]) => {
       this.listaProduto = resp
     })
   }
 
-  findByIdUsuario(){
-    this.auth.findByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
+  findByIdUsuario() {
+    this.auth.findByIdUsuario().subscribe((resp: Usuario) => {
       this.usuario = resp
     })
   }
   findByIdProduto(id: number) {
     this.produtoService.findByIdProduto(id).subscribe((resp: Produto) => {
       this.produto = resp
+      this.addProduto()
     })
   }
 
-  publicar() {
-    this.categoria.id = this.idCategoria
-    this.produto.categoria = this.categoria
-
-    this.usuario.id = this.idUsuario
-    this.produto.usuario = this.usuario
-
-    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
-      this.produto = resp
-      alert('Produto realizada com sucesso!')
-      this.produto = new Produto()
-      this.getProduto()
-    })
+  addProduto(){
+    this.carrinho.adicionar(this.produto)
+    console.log(this.carrinho.produto)
   }
+
+  // publicar() {
+  //   this.categoria.id = this.idCategoria
+  //   this.produto.categoria = this.categoria
+
+  //   this.usuario.id = this.idUsuario
+  //   this.produto.usuario = this.usuario
+
+  //   this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+  //     this.produto = resp
+  //     alert('Produto realizada com sucesso!')
+  //     this.produto = new Produto()
+  //     this.getProduto()
+  //   })
+  // }
 }

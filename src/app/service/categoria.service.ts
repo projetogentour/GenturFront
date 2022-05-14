@@ -17,21 +17,22 @@ export class CategoriaService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
   getCategoria(): Observable<Categoria[]> {
     return this.http.get<Categoria[]>('http://localhost:8080/categoria')
   }
-
-getByIdCategoria(id: number): Observable<Categoria> {
-  return this.http.get<Categoria>(`http://localhost:8080/categoria/${id}`)
-}
-
 
   postCategoria(categoria: Categoria): Observable<Categoria> {
     return this.http.post<Categoria>('http://localhost:8080/categoria', categoria, this.token)
   }
 
   findByIdCategoria(id: number): Observable<Categoria> {
-    return this.http.get<Categoria>(`http://localhost:8080/categoria/${id}`, this.token)
+    return this.http.get<Categoria>(`http://localhost:8080/categoria/${id}`)
   }
 
   putCategoria(categoria: Categoria): Observable<Categoria> {

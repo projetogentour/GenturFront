@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -10,13 +11,17 @@ import { CategoriaService } from '../service/categoria.service';
   styleUrls: ['./categoria.component.css']
 })
 export class CategoriaComponent implements OnInit {
+
   categoria: Categoria = new Categoria()
   listaCategoria: Categoria[]
 
 
+
   constructor(
     private router: Router,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private auth: AuthService,
+
   ) { }
 
 
@@ -27,6 +32,7 @@ export class CategoriaComponent implements OnInit {
       // alert('Voce precisa estar logado para ficar aqui...')
       this.router.navigate(['/entrar'])
     }
+    this.categoriaService.refreshToken()
     this.findAllCategoria()
   }
 
@@ -38,6 +44,7 @@ export class CategoriaComponent implements OnInit {
 
 
   cadastrarCategoria(){
+    this.categoriaService.refreshToken()
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=>{
       this.categoria = resp
       alert('Categoria cadastrada')
@@ -45,4 +52,5 @@ export class CategoriaComponent implements OnInit {
       this.categoria = new Categoria()
     })
   }
+
 }

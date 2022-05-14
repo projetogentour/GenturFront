@@ -29,8 +29,9 @@ export class UsuarioEditComponent implements OnInit {
       // alert('Voce precisa estar logado para ficar aqui...')
       this.router.navigate(['/entrar'])
     }
+    this.auth.refreshToken()
     this.idUsuario = this.route.snapshot.params['id']
-    this.findByIdUsuario(this.idUsuario)
+    this.findByIdUsuario()
   }
 
   confirmSenha(event: any) {
@@ -54,8 +55,8 @@ export class UsuarioEditComponent implements OnInit {
     }
   }
 
-  findByIdUsuario(id: number) {
-    this.auth.findByIdUsuario(id).subscribe((resp: Usuario) => {
+  findByIdUsuario() {
+    this.auth.findByIdUsuario().subscribe((resp: Usuario) => {
       this.usuario = resp
     })
   }
@@ -80,9 +81,9 @@ export class UsuarioEditComponent implements OnInit {
       alert('Usuario apagado com sucesso!')
       this.router.navigate(['/entrar'])
       environment.token = ''
-      environment.nome = ''
-      environment.foto = ''
-      environment.id = 0
+    environment.nome = ''
+    environment.foto = ''
+    environment.id = 0
     })
   }
 
