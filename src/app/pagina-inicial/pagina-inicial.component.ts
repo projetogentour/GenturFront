@@ -5,6 +5,7 @@ import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
+import { CarrinhoService } from '../service/carrinho.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -30,7 +31,8 @@ export class PaginaInicialComponent implements OnInit {
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     public auth: AuthService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private carrinho: CarrinhoService
   ) { }
 
   ngOnInit() {
@@ -43,7 +45,7 @@ export class PaginaInicialComponent implements OnInit {
     let id = this.route.snapshot.params['id']
     this.getProduto()
     this.getCategoria()
-    
+
     this.produtoService.refreshToken()
     this.auth.refreshToken()
     this.categoriaService.refreshToken()
@@ -80,7 +82,13 @@ export class PaginaInicialComponent implements OnInit {
   findByIdProduto(id: number) {
     this.produtoService.findByIdProduto(id).subscribe((resp: Produto) => {
       this.produto = resp
+      this.addProduto()
     })
+  }
+
+  addProduto(){
+    this.carrinho.adicionar(this.produto)
+    console.log(this.carrinho.produto)
   }
 
   // publicar() {
