@@ -15,11 +15,15 @@ h4{
   text-align: center;
 
 }
-.btnCor {
-  background-color: #029248d1;
-  color: white;
+.btn-Cor {
+  background-color: #9db901a5;
+  color: rgb(0, 0, 0);
 }
 
+.btn-Cor:hover {
+  color:#fff;
+  background-color: #db9943;
+}
 .card_btn{
   color:#000000;
   font-size: 23px;
@@ -470,3 +474,4 @@ h4{
   font-weight: 400;
   text-transform: uppercase;
 }
+

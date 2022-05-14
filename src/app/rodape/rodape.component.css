@@ -5,4 +5,10 @@ a{
 
 footer{
   background-color: #1c877c9a;
+  font-size: 19px;
+}
+
+p{
+  color: rgba(0, 0, 0, 0.623);
+  font-size: 15px;
 }
