@@ -26,6 +26,7 @@ export class PaginaInicialComponent implements OnInit {
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
 
+
   constructor(
     private router: Router,
     private produtoService: ProdutoService,
@@ -90,6 +91,15 @@ export class PaginaInicialComponent implements OnInit {
     this.carrinho.adicionar(this.produto)
     console.log(this.carrinho.produto)
   }
+
+  // editar(){
+  //   let editOK: boolean = false;
+
+  //   if(this.auth.idUsuario == this.produto.usuario.id){
+  //     editOK = true
+  //   }
+  //   return editOK
+  // }
 
   // publicar() {
   //   this.categoria.id = this.idCategoria
