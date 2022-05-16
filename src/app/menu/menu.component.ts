@@ -91,7 +91,7 @@ export class MenuComponent implements OnInit {
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
 
-    this.usuario.id = this.idUsuario
+    this.usuario.id = this.auth.idUsuario
     this.produto.usuario = this.usuario
 
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
