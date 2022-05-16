@@ -39,7 +39,8 @@ export class UsuarioEditComponent implements OnInit {
   }
 
   atualizar() {
-
+    console.log(this.usuario)
+    this.usuario.produto = []
     if (this.usuario.senha == this.confirmarSenha) {
       this.auth.atualizar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp

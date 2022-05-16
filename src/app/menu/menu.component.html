@@ -32,7 +32,7 @@
 <div ><nav class="navbar navbar-expand-lg navbar-light navconteudo" >
   <div *ngIf="auth.logado()" class="nav-item dropdown">
     <a (click)="findByIdUsuario()" class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-      <img [src]="foto" onerror="this.src ='https://cdn-icons-png.flaticon.com/512/5768/5768496.png' " alt="imagem de perfil" class="rounded-circle img-fluid" width="50">
+      <img [src]="usuario.foto" onerror="this.src ='https://cdn-icons-png.flaticon.com/512/5768/5768496.png' " alt="imagem de perfil" class="rounded-circle img-fluid" width="50">
     </a>
 
     <div  class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -139,7 +139,7 @@
 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary" (click)="publicar()" data-dismiss="modal">Publicar</button>
+        <button type="button" class="btn btn-primary" (click)="publicar()"  data-dismiss="modal">Publicar</button>
       </div>
     </div>
   </div>

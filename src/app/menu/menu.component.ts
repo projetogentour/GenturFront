@@ -17,7 +17,6 @@ import { ProdutoService } from "../service/produto.service"
 export class MenuComponent implements OnInit {
 
   id = environment.id
-  foto = environment.foto
 
   listaProduto: Produto[]
   produto: Produto = new Produto()
@@ -30,12 +29,13 @@ export class MenuComponent implements OnInit {
   idUsuario = environment.id
 
 
+
   constructor(
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     public auth: AuthService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit() {
