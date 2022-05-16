@@ -14,7 +14,6 @@ export class ContatoComponent implements OnInit {
   }
 
   enviarMensagem(){
-    
     window.scroll(0,0)
   }
 
