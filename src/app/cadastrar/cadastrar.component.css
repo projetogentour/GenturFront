@@ -1,23 +1,44 @@
 .form-group{
-    padding: 0.1rem;
-  }
+  padding: 0.1rem;
+}
 
-  label{
-    padding: 0.1rem;
-  }
+label{
+  padding: 0.1rem;
+}
 
-  button{
-    margin: 2rem;
-    padding: 0.5rem 0.90rem;
+button{
+  margin: 2rem;
+  padding: 0.5rem 0.90rem;
 
-  }
-  /* .logo{
-    text-align: center;
-  } */
+}
+.logo{
+  text-align: center;
+}
 
-  main{
-    padding: 2px 2px;
-    margin: 5px 120px;
-    border-radius: 10px;
-    /* background-color:aqua; */
-  }
+main{
+  margin: 10;
+    padding: 0;
+    height: 50%;
+  background-color: #CCF5F1 ;
+}
+
+/* .bg-h1{
+background-color: #CCF5F1;
+border: 30px;
+} */
+
+.borda{
+  border-radius: 50px;
+
+}
+
+
+
+.page-header { background: url(https://images.pexels.com/photos/6118897/pexels-photo-6118897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) repeat; position: relative; background-size:cover ; height: 900px }
+.page-caption { padding-top: 170px; padding-bottom: 174px; }
+
+.posicao-card {
+position: relative;
+bottom: 900px;
+}
+

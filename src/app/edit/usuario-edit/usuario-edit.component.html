@@ -15,7 +15,7 @@
 
     <div class="form-group text-center">
       <label for="usuario" class="til"> Usuario</label>
-      <input [(ngModel)]="usuario.usuario" class="form-control text-center" type="email" name="usuario" id="usuario" placeholder="Seu Usuario" onkeyup="validaEmail()">
+      <input [(ngModel)]="usuario.usuario"(keyup)="validaEmail()" class="form-control text-center" type="email" name="usuario" id="usuario" placeholder="Seu Usuario" >
     </div>
 
     <div class="form-group text-center">
