@@ -1,90 +1,119 @@
+<div class="container-fluid bg text-dark py-4">
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <h1 class="text-center atzCon p-3">ATUALIZAR USUARIO</h1>
 
-  <div class="container-fluid bg text-dark py-4">
-    <div class="container-fluid">
-      <div class="row ">
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-              <h1 class="text-center atzCon p-3">ATUALIZAR USUARIO</h1>
+        <div>
+          <form>
 
-<div>
-  <form >
+            <div class="form-group text-center">
+              <label for="nome" class="til"> Nome Completo</label>
+              <input [(ngModel)]="usuario.nomeCompleto" class="form-control text-center" type="text" name="nomeCompleto"
+                id="nomeCompleto" placeholder="Seu Nome Completo">
+            </div>
 
-    <div class="form-group text-center">
-      <label for="nome" class="til"> Nome Completo</label>
-      <input [(ngModel)]="usuario.nomeCompleto" class="form-control text-center" type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Seu Nome Completo" >
-    </div>
+            <div class="form-group text-center">
+              <label for="usuario" class="til"> Usuario</label>
+              <input [(ngModel)]="usuario.usuario" (keyup)="validaEmail()" class="form-control text-center" type="email"
+                name="usuario" id="usuario" placeholder="Seu Usuario">
+            </div>
 
-    <div class="form-group text-center">
-      <label for="usuario" class="til"> Usuario</label>
-      <input [(ngModel)]="usuario.usuario"(keyup)="validaEmail()" class="form-control text-center" type="email" name="usuario" id="usuario" placeholder="Seu Usuario" >
-    </div>
+            <div class="form-group text-center">
+              <label for="linkDaFoto" class="til"> Link da Foto</label>
+              <input [(ngModel)]="usuario.foto" class="form-control text-center" type="text" name="foto" id="foto"
+                placeholder="Link da sua foto">
+            </div>
 
-    <div class="form-group text-center">
-      <label for="linkDaFoto" class="til"> Link da Foto</label>
-      <input [(ngModel)]="usuario.foto" class="form-control text-center" type="text" name="foto" id="foto" placeholder="Link da sua foto" >
-    </div>
+            <div class="form-group text-center">
+              <label for="senha" class="til"> Senha</label>
+              <input (input)="confirmSenha($event)" class="form-control text-center" type="password" name="senha"
+                id="senha" placeholder="Sua Senha">
+            </div>
 
-    <div class="form-group text-center">
-      <label for="senha" class="til"> Senha</label>
-      <input (input)="confirmSenha($event)" class="form-control text-center" type="password" name="senha" id="senha" placeholder="Sua Senha" >
-    </div>
-
-    <div class="form-group text-center">
-      <label for="confirmSenha" class="til"> Confirmar Senha</label>
-      <input [(ngModel)]="usuario.senha" class="form-control text-center" type="password" name="confirmSenha" id="confirmSenha"
-        placeholder="Confirme Sua Senha" >
-    </div>
-    <!-- <div class="form-group">
+            <div class="form-group text-center">
+              <label for="confirmSenha" class="til"> Confirmar Senha</label>
+              <input [(ngModel)]="usuario.senha" class="form-control text-center" type="password" name="confirmSenha"
+                id="confirmSenha" placeholder="Confirme Sua Senha">
+            </div>
+            <!-- <div class="form-group">
       <label for="confirmSenha"> Telefone</label>
       <input [(ngModel)]="usuario.telefone" class="form-control" type="text" name="telefone" id="telefone"
         placeholder="Insira o numero do Telefone" >
     </div> -->
 
-   <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center">
 
-      <button type="submit" class="btn btn-crr" routerLink="/inicio">Cancelar</button>
-      <button  type="submit" class="btn btn-cr " (click)="atualizar()">Atualizar</button>
-      <button class="btn btn-del" data-toggle="modal" data-target="#deleteModal">Deletar Usuario</button>
-    </div>
-  </form>
+              <button type="submit" class="btn btn-crr" routerLink="/inicio">Cancelar</button>
+              <button type="submit" class="btn btn-cr " (click)="atualizar()">Atualizar</button>
+              <button class="btn btn-del" data-toggle="modal" data-target="#deleteModal">Deletar Usuario</button>
+            </div>
+          </form>
 
 
-<div class="container">
-  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="deleteModallLabel">Apagar Usuario</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <div class="container">
+            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModallLabel">Apagar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+
+                    <div class="modal-body">
+                      <h2> Tem certeza que deseja apagar esse usuário?</h2>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center mb-3">
+                      <button class="btn btn-mod mr-4" routerLink="/inico" data-dismiss="modal">Não</button>
+                      <button class="btn btn-modal" (click)="apagar()" data-dismiss="modal">Sim</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="modal-body">
+      </div>
 
-          <div class="modal-body">
-            <h2> Tem certeza que deseja apagar esse usuário?</h2>
+      <div class="col-md-6">
+        <h1 class=" text-center ">Meus Produtos</h1>
+
+
+        <div class="global">
+          <div class="contai">
+            <div class="card" *ngFor="let produto of usuario.produto">
+              <div class="card-header">
+                <img src="{{ produto.foto }}" class="img-fluid"/>
+
+              </div>
+
+              <div class="card-body">
+                <span class="tag tag-teal">{{ produto.categoria.tipo }}</span>
+
+                <h4 class="nomeProduto">
+                  {{ produto.nome }}
+                </h4>
+                <p>{{ produto.descricao }}
+                </p>
+                <p class="card_btn">R$:{{produto.preco }}</p>
+
+                <button class="btn btn-danger " [routerLink]="['/produto-edit', produto.id]">
+                  Editar
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="row">
-    <div class="col-md-12 d-flex justify-content-center mb-3">
-      <button class="btn btn-mod mr-4" routerLink="/inico" data-dismiss="modal" >Não</button>
-      <button class="btn btn-modal" (click)="apagar()" data-dismiss="modal" >Sim</button>
-    </div>
-  </div>
+
       </div>
     </div>
-  </div>
   </div>
 </div>
-
-
-
-        </div>
-
-        <div class="col-md-6">
-          <h1 class=" text-center ">Postagens do usuario</h1>
-
-        </div>
-      </div>
-    </div>
-  </div>
