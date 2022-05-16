@@ -44,6 +44,9 @@
   z-index: 1;
   font-size: 19px;
   color:black ;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+
 }
 
 .btn-cr:hover {
@@ -55,8 +58,10 @@
   background:  #FFE8AD;
   border: none;
   z-index: 1;
-  font-size: 19px;
+  font-size: 21px;
   color:black ;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
 }
 
 .btn-crr:hover {

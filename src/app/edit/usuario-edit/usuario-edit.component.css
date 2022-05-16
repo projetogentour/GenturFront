@@ -21,7 +21,7 @@ option, select{
 form {
   display: block;
 }
-.atzCon{
+.atzCon, .mp{
   color: rgba(0, 0, 0, 0.34);
   font-family: 'Oleo Script Swash Caps', cursive;
   font-family: 'Oswald', sans-serif;
@@ -33,6 +33,7 @@ form {
     1px -1px 0px rgba(47, 151, 96, 0.887),
     1px 0px 0px rgba(47, 151, 96, 0.887);
 }
+
 
 
 .btn-cr {
@@ -114,6 +115,8 @@ form {
 
 .btn-del{
     background:  #c83f11;
+    margin: 15px;
+    padding: 15px;
     border: none;
     z-index: 1;
     font-size: 25px;
@@ -126,3 +129,89 @@ form {
     color:#fff;
     background-color: #ff0000;
   }
+
+
+.global {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #f7f8fc23;
+  color: #000105;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+}
+
+.contai {
+  display: flex;
+  width: 1040px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+}
+
+.card {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px rgba(1, 92, 144, 0.426);
+  overflow: hidden;
+  width: 275px;
+}
+
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 15px;
+  min-height: 250px;
+}
+.card-body p{
+  font-size: 25px;
+}
+
+.tag {
+  border-radius: 50px;
+  font-size: 15px;
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+  padding: 3px 35px;
+  text-transform: uppercase;
+  background-color: #003852;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+}
+
+.nomeProduto{
+  text-transform: uppercase;
+  padding: 3px;
+  font-weight: bold;
+}
+
+.btn-edi{
+  background:  #e3b543;
+  border: none;
+  z-index: 1;
+  font-size: 23px;
+  color:black ;
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+}
+
+.btn-edi:hover {
+  color:#fff;
+  background-color: #c88d03;
+}
+

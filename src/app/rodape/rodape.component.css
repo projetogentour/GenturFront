@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Oswald:wght@200&family=Raleway:ital,wght@1,100&display=swap');
+
 a{
   text-decoration: none;
   cursor: pointer;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+  color: rgba(0, 0, 0, 0.754);
+  font-size: 25px;
 }
 
 footer{
   background-color: #1c877c9a;
   font-size: 19px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
 }
 
-p{
-  color: rgba(0, 0, 0, 0.623);
-  font-size: 15px;
+p, span{
+  color: rgba(0, 0, 0, 0.754);
+  font-size: 25px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
 }
