@@ -14,6 +14,8 @@ export class CadastrarComponent implements OnInit {
   usuario: Usuario = new Usuario()
   confirmarSenha: string;
   tipoUsuario: string;
+
+
   // email: = document.querySelector('#email');
 
   constructor(private auth: AuthService, private router: Router) { }
@@ -33,9 +35,9 @@ export class CadastrarComponent implements OnInit {
     this.confirmarSenha = event.target.value
   }
 
-  tipoUser(event: any) {
-    this.tipoUser = event.target.value
-  }
+  // tipoUser(event: any) {
+  //   this.tipoUser = event.target.value
+  // }
 
   cadastrar() {
     this.usuario.tipo = this.tipoUsuario
@@ -65,4 +67,36 @@ export class CadastrarComponent implements OnInit {
       usuario.style.boxShadow = '0 0 1em red';
     }
   }
+  validaNome() {
+
+      if(this.usuario.nomeCompleto.length >2) {
+    let usuarioNome = ((<HTMLDivElement>document.querySelector('#nome')))
+    usuarioNome.style.borderColor = 'green';
+    usuarioNome.style.boxShadow = '0 0 1 em green';
+
+  }else{
+    let usuarioNome = ((<HTMLDivElement>document.querySelector('#nome')))
+    usuarioNome.style.borderColor = 'red';
+    usuarioNome.style.boxShadow = '0 0 1 em red';
 }
+
+
+    }
+    // validaSenha() {
+
+
+
+    //   if(this.usuario.nomeCompleto.length > 7 ){
+    //   let usuarioSenha = (<HTMLDivElement>document.querySelector('#senha'))
+    //   usuarioSenha.style.borderColor = 'green';
+    //   usuarioSenha.style.boxShadow = '0 0 1em green !important';
+    //   } else{
+    //     let usuarioSenha = (<HTMLInputElement>document.querySelector('#senha'))
+    //     usuarioSenha.style.color = 'red !important';
+    //     usuarioSenha.style.boxShadow = '0 0 1em red';
+
+    //   }
+    //   }
+
+
+  }

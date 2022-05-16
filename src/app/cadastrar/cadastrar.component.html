@@ -26,7 +26,7 @@
 
           <div class="form-group">
             <label for="nome">Nome</label>
-            <input [(ngModel)]="usuario.nomeCompleto" class="form-control" type="text" name="nomeCompleto" id="nome"
+            <input [(ngModel)]="usuario.nomeCompleto" (keyup)="validaNome()"  class="form-control" type="text" name="nomeCompleto" id="nome"
               placeholder="Seu Nome" />
           </div>
 
@@ -38,7 +38,7 @@
 
         <div class="form-group">
           <label for="senha"> Senha</label>
-          <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha"
+          <input (input)="confirmSenha($event)"  class="form-control" type="password" name="senha" id="senha"
             placeholder="Sua Senha" />
         </div>
 
@@ -48,14 +48,14 @@
               placeholder="Confirme Sua Senha" />
           </div>
 
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="tipo"> Tipo de Usuario</label>
             <select class="form-control" name="tipo" id="tipo" (change)="tipoUser($event)">
             <option>Selecione um tipo de usuario:</option>
             <option value="normal">Comprador</option>
             <option value="Adm">Vendedor</option>
           </select>
-        </div>
+        </div> -->
 
         <div class="d-flex justify-content-center">
 
