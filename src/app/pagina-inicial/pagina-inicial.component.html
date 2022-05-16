@@ -62,7 +62,7 @@
             </p>
             <p class="card_btn">R$:{{produto.preco }}</p>
 
-            <button class="btn btn-Cor  " href="">
+            <button class="btn btn-Cor  " href="" >
               COMPRAR
             </button>
                <button *ngIf="auth.logado()" class="btn btn-danger " [routerLink]="['/produto-edit', produto.id]">

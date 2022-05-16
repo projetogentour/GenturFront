@@ -79,7 +79,7 @@
         <a class="nav-link" href="#sobre">Sobre</a>
       </li>
       <li *ngIf="auth.logado()" class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#exampleModal">Vender</a>
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModal" (click)="getCategoria()">Vender</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/contato">Contato</a>

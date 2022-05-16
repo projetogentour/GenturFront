@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { Produto } from 'src/app/model/Produto';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoService } from 'src/app/service/produto.service';
@@ -14,27 +15,25 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class ProdutoEditComponent implements OnInit {
 
-
   produto: Produto = new Produto()
+
   categoria: Categoria = new Categoria()
   idCategoria: number
   listaCategoria: Categoria[]
-
-
 
   constructor(
     private auth: AuthService,
     private route: ActivatedRoute,
     private router: Router,
     private categoriaService: CategoriaService,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
     window.scroll(0, 0)
 
     if (environment.token == '') {
-      // alert('Voce precisa estar logado para ficar aqui...')
       this.router.navigate(['/entrar'])
     }
     this.produtoService.refreshToken()
@@ -68,14 +67,14 @@ export class ProdutoEditComponent implements OnInit {
 
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
-      alert('Postagem atualizada com sucesso!')
+      this.alertas.showAlertSuccess('Produto atualizado com sucesso!')
       this.router.navigate(['/inicio'])
     })
   }
 
   apagar(){
     this.produtoService.deleteProduto(this.produto.id).subscribe(()=>{
-      alert('Produto apagado com sucesso!')
+      this.alertas.showAlertDanger('Produto apagado com sucesso!')
       this.router.navigate(['/inicio'])
     })
   }

@@ -39,10 +39,6 @@ export class PaginaInicialComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0)
 
-    // if (environment.token == '') {
-    //   alert('Voce precisa estar logado para ficar aqui...')
-    //   this.router.navigate(['/entrar'])
-    // }
     let id = this.route.snapshot.params['id']
     this.getProduto()
     this.getCategoria()
@@ -50,11 +46,6 @@ export class PaginaInicialComponent implements OnInit {
     this.produtoService.refreshToken()
     this.auth.refreshToken()
     this.categoriaService.refreshToken()
-
-
-    // this.findByIdProduto(id)
-
-
   }
 
   getCategoria() {
@@ -91,28 +82,4 @@ export class PaginaInicialComponent implements OnInit {
     this.carrinho.adicionar(this.produto)
     console.log(this.carrinho.produto)
   }
-
-  // editar(){
-  //   let editOK: boolean = false;
-
-  //   if(this.auth.idUsuario == this.produto.usuario.id){
-  //     editOK = true
-  //   }
-  //   return editOK
-  // }
-
-  // publicar() {
-  //   this.categoria.id = this.idCategoria
-  //   this.produto.categoria = this.categoria
-
-  //   this.usuario.id = this.idUsuario
-  //   this.produto.usuario = this.usuario
-
-  //   this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
-  //     this.produto = resp
-  //     alert('Produto realizada com sucesso!')
-  //     this.produto = new Produto()
-  //     this.getProduto()
-  //   })
-  // }
 }

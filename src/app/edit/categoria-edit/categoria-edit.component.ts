@@ -2,6 +2,7 @@ import { TemplateLiteral } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { environment } from 'src/environments/environment.prod';
@@ -19,14 +20,14 @@ export class CategoriaEditComponent implements OnInit {
     private categoriaService: CategoriaService,
     private router: Router,
     private route: ActivatedRoute,
-    private auth: AuthService
+    private auth: AuthService,
+    private alertas: AlertasService
   ) {}
 
   ngOnInit() {
     window.scroll(0, 0);
 
     if (environment.token == '') {
-      // alert('Voce precisa estar logado para ficar aqui...')
       this.router.navigate(['/entrar']);
     }
     this.categoriaService.refreshToken()
@@ -45,7 +46,7 @@ export class CategoriaEditComponent implements OnInit {
       .putCategoria(this.categoria)
       .subscribe((resp: Categoria) => {
         this.categoria = resp;
-        alert('Categoria modificada com sucesso!!!');
+        this.alertas.showAlertSuccess('Categoria modificada com sucesso!');
         this.router.navigate(['/categoria'])
       });
   }

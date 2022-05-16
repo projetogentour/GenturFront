@@ -4,6 +4,7 @@ import { environment } from "src/environments/environment.prod"
 import { Categoria } from "../model/Categoria"
 import { Produto } from "../model/Produto"
 import { Usuario } from "../model/Usuario"
+import { AlertasService } from "../service/alertas.service"
 import { AuthService } from "../service/auth.service"
 import { CategoriaService } from "../service/categoria.service"
 import { ProdutoService } from "../service/produto.service"
@@ -28,32 +29,26 @@ export class MenuComponent implements OnInit {
   usuario: Usuario = new Usuario()
   idUsuario = environment.id
 
-
-
   constructor(
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     public auth: AuthService,
     private route: ActivatedRoute,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
     window.scroll(0, 0)
 
-    // if (environment.token == '') {
-    //   alert('Voce precisa estar logado para ficar aqui...')
-    //   this.router.navigate(['/entrar'])
-    // }
     let id = this.route.snapshot.params['id']
 
     this.produtoService.refreshToken()
     this.auth.refreshToken()
     this.categoriaService.refreshToken()
-    // this.findByIdProduto(id)
+
     this.getProduto()
     this.getCategoria()
-    // this.findByIdUsuario()
   }
 
   getCategoria() {
@@ -96,7 +91,7 @@ export class MenuComponent implements OnInit {
 
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
-      alert('Produto realizada com sucesso!')
+      this.alertas.showAlertSuccess('Produto cadastrado com sucesso!')
       this.produto = new Produto()
       this.getProduto()
     })
@@ -109,5 +104,4 @@ export class MenuComponent implements OnInit {
     environment.foto = ''
     environment.id = 0
   }
-
 }
