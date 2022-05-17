@@ -31,7 +31,7 @@
 
 <div ><nav class="navbar navbar-expand-lg navbar-light navconteudo" >
   <div *ngIf="auth.logado()" class="nav-item dropdown">
-    <a (click)="findByIdUsuario()" class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+    <a  class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
       <img [src]="usuario.foto" onerror="this.src ='https://cdn.icon-icons.com/icons2/2120/PNG/512/user_account_person_avatar_icon_131248.png' " alt="imagem de perfil" class="rounded-circle img-fluid" width="50">
     </a>
 
@@ -50,10 +50,10 @@
           <a class="nav-link" >  <span class="sr-only">(current)</span></a>
         </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/inicio">Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/inicio">Inicio<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#produtos">Produtos / Serviços </a>
+        <a class="nav-link" routerLink="/inicio">Produtos / Serviços </a>
       </li>
       <li class="nav-item" *ngIf="auth.logado()">
           <a class="nav-link" routerLink="/carrinho">Carrinho

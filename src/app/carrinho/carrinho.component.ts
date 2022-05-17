@@ -19,7 +19,7 @@ export class CarrinhoComponent implements OnInit {
     private produto: ProdutoService,
     private categoria: CategoriaService,
     private auth: AuthService
-  ) {}
+  ) { }
 
   ngOnInit() {
   }
@@ -28,7 +28,7 @@ export class CarrinhoComponent implements OnInit {
     return this.comprados.map((item) => item.preco).reduce((a, b) => a + b, 0);
   }
 
-  parcela(){
-    return this.total()/12
+  parcela() {
+    return this.total() / 12
   }
 }
