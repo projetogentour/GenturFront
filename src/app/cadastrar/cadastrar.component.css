@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Oswald:wght@200&family=Raleway:ital,wght@1,100&display=swap');
 .form-group {
   padding: 0.1rem;
 }
@@ -9,7 +10,6 @@ label {
 button {
   margin: 2rem;
   padding: 0.5rem 0rem;
-
 }
 
 .logo {
@@ -19,7 +19,7 @@ button {
 main {
   margin: 0;
   padding: 0;
-  background: url(https://images.pexels.com/photos/6118897/pexels-photo-6118897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) repeat;
+  background: url(https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat;
   position: relative;
   background-size: cover;
 
@@ -36,5 +36,42 @@ main {
   bottom: 1px;
 }
 
-/* .page-header { background: url(https://images.pexels.com/photos/6118897/pexels-photo-6118897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) repeat; position: relative; background-size:cover ; height: 900px }
-.page-caption { padding-top: 170px; padding-bottom: 174px; } */
+.lgn {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+}
+
+.btn-lgn {
+  background-color: #096F4B;
+  font-size: 22px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+}
+
+.btn-lgn:hover {
+  background-color: #096f4b98;
+  color: rgb(0, 0, 0);
+}
+
+.btn-can {
+  background-color: #8b2a00;
+  font-size: 22px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+}
+
+.btn-can:hover {
+  background-color: #9f9f0298;
+  color: rgb(0, 0, 0);
+}
+
+.til{
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
