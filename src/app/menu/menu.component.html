@@ -1,5 +1,5 @@
 <!-- !INICIO DA NAVBAR GENTUR -->
-
+<!--
 <nav class="navbar navbar-expand-lg navbar-light topo">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,13 +26,13 @@
       </li>
     </ul>
   </div>
-</nav>
+</nav> -->
 
 
 <div ><nav class="navbar navbar-expand-lg navbar-light navconteudo" >
   <div *ngIf="auth.logado()" class="nav-item dropdown">
     <a (click)="findByIdUsuario()" class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-      <img [src]="usuario.foto" onerror="this.src ='https://cdn-icons-png.flaticon.com/512/5768/5768496.png' " alt="imagem de perfil" class="rounded-circle img-fluid" width="50">
+      <img [src]="usuario.foto" onerror="this.src ='https://cdn.icon-icons.com/icons2/2120/PNG/512/user_account_person_avatar_icon_131248.png' " alt="imagem de perfil" class="rounded-circle img-fluid" width="50">
     </a>
 
     <div  class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -52,28 +52,8 @@
       <li class="nav-item active">
         <a class="nav-link" routerLink="/inicio">Inicio <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-          Produtos
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#produtos">Decoração</a>
-          <a class="dropdown-item" href="#produtos">Instrumentos</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#produtos">Outros</a>
-        </div>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-            Serviços
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Guia</a>
-            <a class="dropdown-item" href="#">Viagens</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#servicos">Outros</a>
-          </div>
       <li class="nav-item">
-        <a class="nav-link" href="#promocao">Promoções</a>
+        <a class="nav-link" href="#produtos">Produtos / Serviços </a>
       </li>
       <li class="nav-item" *ngIf="auth.logado()">
           <a class="nav-link" routerLink="/carrinho">Carrinho
@@ -84,15 +64,33 @@
       <li *ngIf="auth.logado()" class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal" (click)="getCategoria()">Vender</a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" routerLink="/contato">Contato</a>
       </li>
 
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
       <button class="btn botaoP my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
+    </form> -->
+    <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <li class="nav-item pl-3">
+        <img src="https://cdn.discordapp.com/attachments/971065406712320010/972653607319109642/16519690581188825130.png" alt="" width="55px" height="55px" class="img-fluid rounded-circle">
+        <a
+          class="m-0 font-weight-bold text-white sair"
+          *ngIf="auth.logado()"
+          (click)="sair()"
+          >Sair <i class="fa fa-sign-out" aria-hidden="true"></i
+        ></a>
+      </li>
+      <li class="nav-item pl-3" *ngIf="!auth.logado()">
+
+        <a class="m-0 font-weight-bold text-white sair" routerLink="/entrar"
+          >Entrar <i class="fa fa-sign-out" aria-hidden="true"></i
+        ></a>
+      </li>
+    </ul>
   </div>
 </nav></div>
 <!-- !FINAL DA NAVBAR LOGO GENTUR -->

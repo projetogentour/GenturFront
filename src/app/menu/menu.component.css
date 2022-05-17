@@ -1,19 +1,18 @@
- @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
-
+ /* @import url(https://fonts.googleapis.com/css?family=Bree+Serif); */
+ @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Oswald:wght@200&family=Raleway:ital,wght@1,100&display=swap');
+/*
 .fs-16 {
-  font-size: 25pt;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-size: 35pt;
   text-align: center;
-}
+} */
 
 a{
   cursor: pointer;
   text-decoration: none;
 }
 
-.topo{
-  background-color: #1c877ca2;
-
-}
 .sair{
   font-size: 16pt;
 }
@@ -22,23 +21,12 @@ a{
 
   background-color: #1C877D;
 }
-/* .navconteudo ul {
-	padding: 0;
-  margin: 0;
-	list-style: none;
-	position: relative;
-	} */
-
-  /* .navconteudo ul li {
-    display:inline-block;
-    background-color: #e1eae9;
-    } */
 
 .navconteudo a {
-    padding: 0  18px;
+    padding: 0  45px;
     color:rgb(0, 0, 0);
-    font-size: 20px;
-    line-height:  45px;
+    font-size: 25px;
+    line-height:  50px;
     text-decoration:none;
     font-weight: bold;
   }
@@ -47,8 +35,25 @@ a{
     background-color: #9bd487;
   }
 
-  .botaoP{
+  /* .botaoP{
     color: black;
     background-color: rgb(2, 236, 236);
+  } */
+
+  .navbar-collapse{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
   }
 
+  .dropdown-menu{
+    background-color: #1C877D;
+  }
+  .dropdown-menu:hover{
+    background-color: #9bd487;
+  }
+
+  .dropdown-item{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+  }
