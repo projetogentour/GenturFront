@@ -6,6 +6,7 @@ import { Produto } from "../model/Produto"
 import { Usuario } from "../model/Usuario"
 import { AlertasService } from "../service/alertas.service"
 import { AuthService } from "../service/auth.service"
+import { CarrinhoService } from "../service/carrinho.service"
 import { CategoriaService } from "../service/categoria.service"
 import { ProdutoService } from "../service/produto.service"
 
@@ -35,7 +36,8 @@ export class MenuComponent implements OnInit {
     private categoriaService: CategoriaService,
     public auth: AuthService,
     private route: ActivatedRoute,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    public carrinho: CarrinhoService
   ) { }
 
   ngOnInit() {
@@ -94,6 +96,11 @@ export class MenuComponent implements OnInit {
       this.alertas.showAlertSuccess('Produto cadastrado com sucesso!')
       this.produto = new Produto()
       this.getProduto()
+
+      let currentUrl = this.router.url;
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+      this.router.onSameUrlNavigation = 'reload';
+      this.router.navigate([currentUrl]);
     })
   }
 

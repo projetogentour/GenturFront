@@ -75,8 +75,11 @@
       <li class="nav-item">
         <a class="nav-link" href="#promocao">Promoções</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#sobre">Sobre</a>
+      <li class="nav-item" *ngIf="auth.logado()">
+          <a class="nav-link" routerLink="/carrinho">Carrinho
+          <span *ngIf='carrinho.totalItens >= 1' class="text-danger position-absolute top-0 start-100 translate-middle badge rounded-pill">
+            {{carrinho.totalItens}}
+          </span></a>
       </li>
       <li *ngIf="auth.logado()" class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal" (click)="getCategoria()">Vender</a>

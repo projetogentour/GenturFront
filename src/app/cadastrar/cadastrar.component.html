@@ -26,13 +26,13 @@
 
           <div class="form-group">
             <label for="nome">Nome</label>
-            <input [(ngModel)]="usuario.nomeCompleto" (keyup)="validaNome()"  class="form-control" type="text" name="nomeCompleto" id="nome"
+            <input [(ngModel)]="usuario.nomeCompleto" (keyup)="validaNomeCad()"  class="form-control" type="text" name="nomeCompleto" id="nomeCad"
               placeholder="Seu Nome" />
           </div>
 
           <div class="form-group">
             <label for="usuario"> Usuario</label>
-            <input [(ngModel)]="usuario.usuario" (keyup)="validaEmail()" class="form-control" type="email" name="usuario" id="usuario"
+            <input [(ngModel)]="usuario.usuario" (keyup)="validaEmailCad()" class="form-control" type="email" name="usuario" id="usuarioCad"
               placeholder="email@email.com"  />
           </div>
 
@@ -46,6 +46,12 @@
             <label for="confirmSenha"> Confirmar Senha</label>
             <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmSenha" id="confirmSenha"
               placeholder="Confirme Sua Senha" />
+          </div>
+
+          <div class="form-group">
+            <label for="foto"> Foto de Usuario</label>
+            <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto"
+              placeholder="Link da Foto" />
           </div>
 
           <!-- <div class="form-group">

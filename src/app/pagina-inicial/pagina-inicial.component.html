@@ -48,7 +48,7 @@
       <div class="contai">
         <div class="card" *ngFor="let produto of listaProduto">
           <div class="card-header">
-            <img src="{{ produto.foto }}" />
+            <img [src]="produto.foto" onerror="this.src ='../../assets/img/imgIndisponivel.jpg' "/>
 
           </div>
 
@@ -62,7 +62,7 @@
             </p>
             <p class="card_btn">R$:{{produto.preco }}</p>
 
-            <button class="btn btn-Cor  " href="" >
+            <button class="btn btn-Cor  " (click)="findByIdProduto(produto.id)" >
               COMPRAR
             </button>
                <!-- <button *ngIf="auth.logado()" class="btn btn-danger " [routerLink]="['/produto-edit', produto.id]">

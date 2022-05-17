@@ -15,7 +15,7 @@ export class UsuarioEditComponent implements OnInit {
 
   usuario: Usuario = new Usuario()
   idUsuario: number
-  
+
   confirmarSenha: string
 
   constructor(
@@ -64,23 +64,37 @@ export class UsuarioEditComponent implements OnInit {
     })
   }
 
-  validaEmail() {
+  validaEmailEdit() {
     let regex = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/
 
     if(this.usuario.usuario.match(regex)) {
-      let usuario = (<HTMLDivElement>document.querySelector('#usuario'))
+      let usuario = (<HTMLDivElement>document.querySelector('#usuarioEdit'))
       usuario.style.borderColor = 'green';
       usuario.style.boxShadow = '0 0 1em green';
     }
     else{
-      let usuario = (<HTMLDivElement>document.querySelector('#usuario'))
+      let usuario = (<HTMLDivElement>document.querySelector('#usuarioEdit'))
       usuario.style.borderColor = 'red';
       usuario.style.boxShadow = '0 0 1em red';
     }
   }
 
+  validaNomeEdit(){
+    let nomeEdit = this.usuario.nomeCompleto
+    let usuarioNomeEdit = (<HTMLDivElement>document.getElementById('nomeEdit'))
+    if (this.usuario.nomeCompleto.length > 2) {
+      usuarioNomeEdit.style.borderColor = 'green';
+      usuarioNomeEdit.style.boxShadow = '0 0 1em green';
+
+    } else {
+      usuarioNomeEdit.style.borderColor = 'red';
+      usuarioNomeEdit.style.boxShadow = '0 0 1em red';
+    }
+  }
+
+
   apagar(){
-    this.auth.deleteUsuario(this.idUsuario).subscribe(()=>{
+    this.auth.deleteUsuario(this.auth.idUsuario).subscribe(()=>{
       alert('Usuario apagado com sucesso!')
       this.router.navigate(['/entrar'])
       environment.token = ''

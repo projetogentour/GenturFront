@@ -7,26 +7,27 @@
         <div>
           <form>
             <div class="form-group text-center">
-              <label for="nome" class="til"> Nome Completo</label>
+              <label for="nomeEdit" class="til"> Nome Completo</label>
               <input
                 [(ngModel)]="usuario.nomeCompleto"
+                (keyup)="validaNomeEdit()"
                 class="form-control text-center"
                 type="text"
                 name="nomeCompleto"
-                id="nomeCompleto"
+                id="nomeEdit"
                 placeholder="Seu Nome Completo"
               />
             </div>
 
             <div class="form-group text-center">
-              <label for="usuario" class="til"> Usuario</label>
+              <label for="usuarioEdit" class="til"> Usuario</label>
               <input
                 [(ngModel)]="usuario.usuario"
-                (keyup)="validaEmail()"
+                (keyup)="validaEmailEdit()"
                 class="form-control text-center"
                 type="email"
                 name="usuario"
-                id="usuario"
+                id="usuarioEdit"
                 placeholder="Seu Usuario"
               />
             </div>

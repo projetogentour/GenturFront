@@ -44,31 +44,30 @@ export class CadastrarComponent implements OnInit {
     }
   }
 
-  validaEmail() {
+  validaEmailCad() {
     let regex = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/
-
     if (this.usuario.usuario.match(regex)) {
-      let usuario = (<HTMLDivElement>document.querySelector('#usuario'))
-      usuario.style.borderColor = 'green';
-      usuario.style.boxShadow = '0 0 1em green';
+      let usuarioCad = (<HTMLDivElement>document.querySelector('#usuarioCad'))
+      usuarioCad.style.borderColor = 'green';
+      usuarioCad.style.boxShadow = '0 0 1em green';
     }
     else {
-      let usuario = (<HTMLDivElement>document.querySelector('#usuario'))
-      usuario.style.borderColor = 'red';
-      usuario.style.boxShadow = '0 0 1em red';
+      let usuarioCad = (<HTMLDivElement>document.querySelector('#usuarioCad'))
+      usuarioCad.style.borderColor = 'red';
+      usuarioCad.style.boxShadow = '0 0 1em red';
     }
   }
-  validaNome() {
 
+  validaNomeCad(){
+    let nomeCad = this.usuario.nomeCompleto
+    let usuarioNomeCad = (<HTMLDivElement>document.getElementById('nomeCad'))
     if (this.usuario.nomeCompleto.length > 2) {
-      let usuarioNome = ((<HTMLDivElement>document.querySelector('#nome')))
-      usuarioNome.style.borderColor = 'green';
-      usuarioNome.style.boxShadow = '0 0 1 em green';
+      usuarioNomeCad.style.borderColor = 'green';
+      usuarioNomeCad.style.boxShadow = '0 0 1em green';
 
     } else {
-      let usuarioNome = ((<HTMLDivElement>document.querySelector('#nome')))
-      usuarioNome.style.borderColor = 'red';
-      usuarioNome.style.boxShadow = '0 0 1 em red';
+      usuarioNomeCad.style.borderColor = 'red';
+      usuarioNomeCad.style.boxShadow = '0 0 1em red';
     }
   }
 }
