@@ -52,7 +52,3 @@ a{
     background-color: rgb(2, 236, 236);
   }
 
-  .badge !important {
-    font-size: 10px;
-    background-color: var(--main-red) !important;
-  }
