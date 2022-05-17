@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Oswald:wght@200&family=Raleway:ital,wght@1,100&display=swap');
+
+
 /*Arredondamento da borda do card*/
 .borda {
 	height: 380px;
@@ -6,18 +9,61 @@
 
   /*cabeçalho com imagem*/
   .header {
-	background: url(https://images.pexels.com/photos/1595739/pexels-photo-1595739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;
+	background: url(https://images.pexels.com/photos/1547836/pexels-photo-1547836.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat;
 	position: relative;
 	background-size: cover;
   }
 
   .page-caption {
-	padding-top: 170px;
-	padding-bottom: 174px;
+	padding-top: 150px;
+	padding-bottom: 200px;
   }
 
   /*Posição do card na página*/
   .posicao-card {
 	position: relative;
 	bottom: 200px;
+  }
+
+  .lgn{
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .btn-lgn{
+    background-color: #096F4B;
+    font-size: 25px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
+    color: aliceblue;
+  }
+  .btn-lgn:hover{
+    background-color: #096f4b98;
+    color:rgb(0, 0, 0);
+  }
+
+  .bg-fil{
+background-color: #096F4B;
+  }
+
+   p{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px
+  }
+
+  a{
+    text-decoration: none;
+    color: #096F4B;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  a:hover{
+    text-decoration:underline;
+
   }

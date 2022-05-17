@@ -1,44 +1,40 @@
-.form-group{
+.form-group {
   padding: 0.1rem;
 }
 
-label{
+label {
   padding: 0.1rem;
 }
 
-button{
+button {
   margin: 2rem;
-  padding: 0.5rem 0.90rem;
+  padding: 0.5rem 0rem;
 
 }
-.logo{
+
+.logo {
   text-align: center;
 }
 
-main{
-  margin: 10;
-    padding: 0;
-    height: 50%;
-  background-color: #CCF5F1 ;
+main {
+  margin: 0;
+  padding: 0;
+  background: url(https://images.pexels.com/photos/6118897/pexels-photo-6118897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) repeat;
+  position: relative;
+  background-size: cover;
+
 }
 
-/* .bg-h1{
-background-color: #CCF5F1;
-border: 30px;
-} */
 
-.borda{
+.borda {
   border-radius: 50px;
 
 }
 
-
-
-.page-header { background: url(https://images.pexels.com/photos/6118897/pexels-photo-6118897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) repeat; position: relative; background-size:cover ; height: 900px }
-.page-caption { padding-top: 170px; padding-bottom: 174px; }
-
 .posicao-card {
-position: relative;
-bottom: 900px;
+  position: relative;
+  bottom: 1px;
 }
 
+/* .page-header { background: url(https://images.pexels.com/photos/6118897/pexels-photo-6118897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) repeat; position: relative; background-size:cover ; height: 900px }
+.page-caption { padding-top: 170px; padding-bottom: 174px; } */
