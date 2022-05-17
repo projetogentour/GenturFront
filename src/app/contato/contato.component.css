@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Oswald:wght@200&family=Raleway:ital,wght@1,100&display=swap');
+
 body{
   color: #333;
   font-family: "Roboto", Helvetica, Arial, Verdana, sans-serif;
@@ -82,9 +84,7 @@ textarea {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-.contact-form .input-block.focus {
 
-}
 .contact-form .input-block.textarea {
   height: auto;
 }
@@ -127,7 +127,7 @@ textarea {
   top: 0;
 }
 .contact-form .square-button{
-  background-color: #00B16A;
+  background-color: #025d88;
   color: #fff;
   font-size: 26px;
   text-transform: uppercase;
@@ -150,10 +150,12 @@ textarea {
   transform-style: preserve-3d;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
 }
 
 .contact-form .danger-button{
-  background-color: #f93154;
+  background-color: #982907d5;
   color: #fff;
   font-size: 26px;
   text-transform: uppercase;
@@ -177,18 +179,22 @@ textarea {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   margin-right: 10px;
+  font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
 }
 
 .contact-form .danger-button:hover, .contact-form .danger-button:focus {
-  background-color: #f93154;
+  background-color: #982907d5;
   box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
   transform: translateY(-4px);
+  color: rgb(0, 0, 0);
 }
 
 .contact-form .square-button:hover, .contact-form .square-button:focus {
-  background-color: #66CC99;
+  background-color: #005d97;
   box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
   transform: translateY(-4px);
+  color: rgb(0, 0, 0);
 }
 
 @media (min-width: 768px) {
@@ -203,11 +209,15 @@ textarea {
   }
 }
 @media (max-width: 568px) {
+
+
   .contact-form {
     padding: 10px;
   }
 }
 /*----Estilo da página---*/
+
+
 
 .contact-wrap {
   padding: 15px;
@@ -233,5 +243,8 @@ textarea {
 }
 
 h2{
-  font-family: "Roboto", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 40px;
+  color:black ;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
 }

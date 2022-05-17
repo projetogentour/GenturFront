@@ -39,7 +39,7 @@ h4 {
   top: 0;
   z-index: -1;
   /* transform: translate3d(0,0,0) scale(1.25); */
-  background: black url("https://images.pexels.com/photos/3811842/pexels-photo-3811842.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260") no-repeat center center;
+  background: black url("https://images.pexels.com/photos/2801312/pexels-photo-2801312.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center center;
   background-size: cover;
 }
 
@@ -192,7 +192,7 @@ h4 {
 }
 
 .card-body p {
-  font-size: 23px;
+  font-size: 18px;
 }
 
 .tag {
