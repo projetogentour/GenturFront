@@ -1,6 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Oswald:wght@200&family=Raleway:ital,wght@1,100&display=swap');
+
+
 .produtoFoto {
   min-height: 100%;
   max-height: 150px;
   width: 100%;
   object-fit: cover;
+}
+
+.titulo {
+  color: rgba(0, 0, 0, 0.958);
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  text-shadow:
+    -1px -1px 0px rgba(1, 127, 60, 0.901),
+    -1px 1px 0px rgba(1, 127, 60, 0.901),
+    1px -1px 0px rgba(1, 127, 60, 0.901),
+    1px 0px 0px rgba(1, 127, 60, 0.901);
+
+}
+
+.til{
+  text-transform: uppercase;
+  font-family: 'Oleo Script Swash Caps', cursive;
+   font-family: 'Oswald', sans-serif;
+   font-weight: bold;
+   font-size: 20px;
+}
+.cat{
+  text-transform: uppercase;
+  font-family: 'Oleo Script Swash Caps', cursive;
+   font-family: 'Oswald', sans-serif;
+   font-size: 18px;
+   text-decoration: underline;
+}
+
+.prec{
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  color: black;
+}
+
+.final{
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+.fin{
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  color: black;
+}
+
+.btn-cr{
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-size: 23px;
+  color: black;
+  font-weight: bold;
+  background-color: rgb(140, 144, 254);
+}
+.btn-cr:hover{
+  background-color: rgba(255, 153, 0, 0.625);
 }

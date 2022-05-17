@@ -57,3 +57,50 @@ a{
     font-family: 'Oswald', sans-serif;
     font-size: 25px;
   }
+
+
+  .nProd{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .mod{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+
+
+  .btn-pub {
+    background:  #C1E4B4;
+    border: none;
+    z-index: 1;
+    font-size: 19px;
+    color:black ;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
+
+  }
+
+  .btn-pub:hover {
+    color:#fff;
+    background-color: #1c877cd9;
+
+  }
+  .btn-can {
+    background:  #FFE8AD;
+    border: none;
+    z-index: 1;
+    font-size: 21px;
+    color:black ;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .btn-can:hover {
+    color:#fff;
+    background-color: #CA2A02;
+
+  }

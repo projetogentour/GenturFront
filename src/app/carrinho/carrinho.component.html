@@ -1,41 +1,45 @@
 <div class="container-fluid my-4">
   <div class="container">
     <div class="row">
-      <h3 class='text-danger'>Minhas compras</h3>
+      <h3 class='titulo p-4'>Minhas compras</h3>
     </div>
+
+
     <div class="row d-flex align-items-center justify-content-between">
       <div class="col-7">
-        <div class="row border rounded border-dark p-0 mb-3" *ngFor='let produto of listaCompras'>
+        <div class="row  bd border rounded border-dark p-0 mb-3" *ngFor='let produto of listaCompras'>
           <div class="col-3 p-0 m-0">
             <img [src]="produto.foto" onerror="this.src ='../../assets/img/imgIndisponivel.jpg' " alt="" class="produtoFoto rounded img-fluid" >
           </div>
           <div class="col-6 d-flex flex-column justify-content-center">
             <div class="row">
-              <h5 class=''>{{produto.nome}}</h5>
-              <p>Plataforma: {{produto.categoria.tipo}}</p>
-              <p class='m-0'>Publisher: Ubisoft</p>
+              <h5 class='til p-3'>{{produto.nome}}</h5>
+            </div>
+            <div class="row">
+              <p class='m-0 cat p-3'>Categoria: {{produto.categoria.tipo}}</p>
             </div>
           </div>
           <div class="col-3">
             <div class="row d-flex justify-content-center align-items-center h-100">
-              <h5 class="text-center"> {{produto.preco | currency: "BRL"}}</h5>
+              <h5 class="text-center prec"> {{produto.preco | currency: "BRL"}}</h5>
             </div>
           </div>
         </div>
       </div>
+
       <div class="col-3">
         <div class="row">
           <div class="col-12">
             <div class="row d-flex justify-content-center align-items-center">
-              <h5 class="text-center">Total: {{total() | currency: "BRL"}}</h5>
-              <p class='text-center'>em até 12 parcelas de: {{parcela() | currency: "BRL"}}</p>
+              <h5 class="text-center final">Total: {{total() | currency: "BRL"}}</h5>
+              <p class='text-center fin'>em até 12 parcelas de: {{parcela() | currency: "BRL"}}</p>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-12">
             <div class="row">
-              <button class="btn btn-danger btn-block">Finalizar compra</button>
+              <button class="btn btn-cr btn-block">Finalizar compra</button>
             </div>
           </div>
         </div>
