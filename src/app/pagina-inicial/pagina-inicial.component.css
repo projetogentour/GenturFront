@@ -528,18 +528,20 @@ h4 {
   height: 50px;
   background-color: #000;
   text-decoration: none;
-  scroll-behavior: smooth;
+
 }
+
 .buton::after {
   content: "↑";
   font-size: 32px;
   font-weight: bold;
   color: aliceblue;
   transition: margin-top 250ms;
-  scroll-behavior: smooth;
+
 
 }
+
 .buton:hover::after {
-  margin-top:-8px;
-  scroll-behavior: smooth;
+  margin-top: -8px;
+
 }
